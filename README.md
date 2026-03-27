@@ -52,6 +52,16 @@ It is built for fast workflow, structured technique catalogs, rendered query pre
 - Results depend on third-party search engines and public indexing
 - Use only for authorized security research and permitted assessments
 
+## Screenshots
+
+<p align="center">
+  <img src="Screenshots/Screenshot 2026-03-27 123136.png" alt="DorkVault Light Theme" width="900" />
+</p>
+
+<p align="center">
+  <img src="Screenshots/Screenshot 2026-03-27 123147.png" alt="DorkVault Dark Theme" width="900" />
+</p>
+
 ## License
 
 See the [LICENSE](LICENSE) file for details.
