@@ -1,1 +1,0 @@
-site:example.com (inurl:admin OR inurl:portal OR intitle:"admin portal" OR intitle:dashboard)
