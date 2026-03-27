@@ -1,19 +1,23 @@
 <h1 align="center">DorkVault</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=2563EB&center=true&vCenter=true&width=850&lines=Desktop+Recon+Query+Launcher;Fast+Search+%E2%80%A2+Filter+%E2%80%A2+Preview;Windows+and+Linux+Releases" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=2563EB&center=true&vCenter=true&width=900&lines=Desktop+Recon+Query+Launcher;Fast+Search+%E2%80%A2+Filter+%E2%80%A2+Preview;Windows+and+Linux+Releases" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Windows-Supported-0078D6?style=for-the-badge&logo=windows&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-Supported-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/UI-PySide6-41CD52?style=for-the-badge&logo=qt&logoColor=white" />
-  <img src="https://img.shields.io/badge/Source-Available-111827?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Windows-Supported-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" />
+  <img src="https://img.shields.io/badge/Linux-Supported-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+  <img src="https://img.shields.io/badge/UI-PySide6-41CD52?style=for-the-badge&logo=qt&logoColor=white" alt="PySide6" />
+  <img src="https://img.shields.io/badge/Source-Available-111827?style=for-the-badge" alt="Source Available" />
 </p>
 
 <p align="center">
-  <a href="../../releases/latest"><img src="https://img.shields.io/badge/Download-Latest_Release-2563EB?style=for-the-badge" alt="Download Latest Release" /></a>
-  <a href="../../releases"><img src="https://img.shields.io/badge/View-All_Releases-0F172A?style=for-the-badge" alt="View All Releases" /></a>
+  <a href="../../releases/latest">
+    <img src="https://img.shields.io/badge/Download-Latest_Release-2563EB?style=for-the-badge" alt="Download Latest Release" />
+  </a>
+  <a href="../../releases">
+    <img src="https://img.shields.io/badge/View-All_Releases-0F172A?style=for-the-badge" alt="View All Releases" />
+  </a>
 </p>
 
 ---
@@ -22,7 +26,7 @@
 
 **DorkVault** is a desktop application for organizing, filtering, previewing, and launching search-based reconnaissance techniques from a clean local interface.
 
-It is built for fast workflow, structured technique catalogs, rendered query previews, and simple desktop usability.
+Built for fast workflow, structured technique catalogs, and simple desktop usability.
 
 ## Features
 
@@ -46,21 +50,21 @@ It is built for fast workflow, structured technique catalogs, rendered query pre
 - [Latest Release](../../releases/latest)
 - [All Releases](../../releases)
 
+## Screenshots
+
+<p align="center">
+  <img src="Screenshots/Screenshot%202026-03-27%20123136.png" alt="DorkVault Light Theme" width="900" />
+</p>
+
+<p align="center">
+  <img src="Screenshots/Screenshot%202026-03-27%20123147.png" alt="DorkVault Dark Theme" width="900" />
+</p>
+
 ## Notes
 
 - For most techniques, use a **domain** like `example.com`, not a full URL
 - Results depend on third-party search engines and public indexing
 - Use only for authorized security research and permitted assessments
-
-## Screenshots
-
-<p align="center">
-  <img src="Screenshots/Screenshot 2026-03-27 123136.png" alt="DorkVault Light Theme" width="900" />
-</p>
-
-<p align="center">
-  <img src="Screenshots/Screenshot 2026-03-27 123147.png" alt="DorkVault Dark Theme" width="900" />
-</p>
 
 ## License
 
