@@ -1,0 +1,1996 @@
+{
+  "category_id": "shodan_queries",
+  "category_name": "Shodan",
+  "description": "Search queries for reviewing internet-facing services indexed by Shodan.",
+  "display_order": 40,
+  "techniques": [
+    {
+      "id": "shodan-admin-html-company-search-8e46c2b980",
+      "name": "Admin HTML Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose html data references `admin`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.html:\"admin\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "html-content",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.html:\"admin\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-admin-portal-html-domain-search-767b76c19d",
+      "name": "Admin Portal HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `admin`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"admin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "html-content",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"admin\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-admin-portal-ssl-domain-search-349e9791a5",
+      "name": "Admin Portal SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `admin`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"admin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "keyword-search",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"admin\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-admin-portal-title-domain-search-d9d4bb18a5",
+      "name": "Admin Portal Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `admin`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"admin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"admin\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-admin-title-company-search-f2a52c0725",
+      "name": "Admin Title Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose title data references `admin`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.title:\"admin\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "http-titles",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.title:\"admin\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-api-html-company-search-6f6cad26fe",
+      "name": "API HTML Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose html data references `api`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.html:\"api\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "html-content",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.html:\"api\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-api-html-domain-search-ae95a1d452",
+      "name": "API HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `api`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"api\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "html-content",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"api\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-api-ssl-domain-search-72fd622251",
+      "name": "API SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `api`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"api\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "keyword-search",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"api\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-api-title-company-search-fa4c691a08",
+      "name": "API Title Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose title data references `api`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.title:\"api\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "http-titles",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.title:\"api\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-api-title-domain-search-9b8c4a8b57",
+      "name": "API Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `api`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"api\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"api\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-dashboard-html-domain-search-338d82fd78",
+      "name": "Dashboard HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `dashboard`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"dashboard\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "dashboards",
+        "html-content",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"dashboard\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-dashboard-ssl-domain-search-5ee9019f77",
+      "name": "Dashboard SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `dashboard`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"dashboard\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "dashboards",
+        "keyword-search",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"dashboard\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-dashboard-title-domain-search-9312bb1508",
+      "name": "Dashboard Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `dashboard`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"dashboard\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "dashboards",
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"dashboard\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-developer-portal-html-domain-search-c065a18985",
+      "name": "Developer Portal HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `developer portal`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"developer portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "html-content",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"developer portal\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-developer-portal-ssl-domain-search-2b2cfde45d",
+      "name": "Developer Portal SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `developer portal`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"developer portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "keyword-search",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"developer portal\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-developer-portal-title-domain-search-161b747fa0",
+      "name": "Developer Portal Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `developer portal`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"developer portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"developer portal\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-documentation-html-company-search-726af17c5a",
+      "name": "Documentation HTML Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose html data references `docs`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.html:\"docs\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "html-content",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.html:\"docs\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-documentation-title-company-search-daa3474bef",
+      "name": "Documentation Title Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose title data references `docs`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.title:\"docs\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "http-titles",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.title:\"docs\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-grafana-html-company-search-bfc5fe0a76",
+      "name": "Grafana HTML Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose html data references `grafana`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.html:\"grafana\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "html-content",
+        "monitoring",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.html:\"grafana\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-grafana-html-domain-search-69f0363afc",
+      "name": "Grafana HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `grafana`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"grafana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "html-content",
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"grafana\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-grafana-ssl-domain-search-cc67121338",
+      "name": "Grafana SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `grafana`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"grafana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"grafana\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-grafana-title-company-search-efc41c883c",
+      "name": "Grafana Title Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose title data references `grafana`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.title:\"grafana\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "http-titles",
+        "monitoring",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.title:\"grafana\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-grafana-title-domain-search-151e65c47b",
+      "name": "Grafana Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `grafana`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"grafana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "http-titles",
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"grafana\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-hostname-domain-search-0e3df5459f",
+      "name": "Hostname Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for `hostname` data associated with a target domain. This supports internet-facing asset discovery and surface review.",
+      "query_template": "hostname:{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "asset-discovery",
+        "hostname",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-http-html-company-search-4b2c88d261",
+      "name": "HTTP HTML Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for `http html` fields that reference the target company. This helps identify branded or organization-linked public systems.",
+      "query_template": "http.html:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "branding",
+        "html-content",
+        "recon",
+        "shodan"
+      ],
+      "example": "http.html:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-http-html-domain-search-29c7a918fd",
+      "name": "HTTP HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for `http html` data associated with a target domain. This supports internet-facing asset discovery and surface review.",
+      "query_template": "hostname:{domain} http.html:\"{domain}\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "branding",
+        "html-content",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"example.com\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-http-title-company-search-00186d0381",
+      "name": "HTTP Title Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for `http title` fields that reference the target company. This helps identify branded or organization-linked public systems.",
+      "query_template": "http.title:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "branding",
+        "http-titles",
+        "recon",
+        "shodan"
+      ],
+      "example": "http.title:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-http-title-domain-search-7986a9adba",
+      "name": "HTTP Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for `http title` data associated with a target domain. This supports internet-facing asset discovery and surface review.",
+      "query_template": "hostname:{domain} http.title:\"{domain}\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "branding",
+        "http-titles",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"example.com\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-jenkins-html-company-search-8db17c1ae4",
+      "name": "Jenkins HTML Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose html data references `jenkins`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.html:\"jenkins\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "ci-cd",
+        "html-content",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.html:\"jenkins\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-jenkins-html-domain-search-4af6f0f8ca",
+      "name": "Jenkins HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `jenkins`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"jenkins\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "ci-cd",
+        "html-content",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"jenkins\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-jenkins-ssl-domain-search-f471d3d0e4",
+      "name": "Jenkins SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `jenkins`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"jenkins\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "ci-cd",
+        "keyword-search",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"jenkins\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-jenkins-title-company-search-fa45f76de4",
+      "name": "Jenkins Title Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose title data references `jenkins`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.title:\"jenkins\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "ci-cd",
+        "http-titles",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.title:\"jenkins\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-jenkins-title-domain-search-76519855a7",
+      "name": "Jenkins Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `jenkins`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"jenkins\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "ci-cd",
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"jenkins\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-kibana-html-domain-search-b82201a5dc",
+      "name": "Kibana HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `kibana`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"kibana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "html-content",
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"kibana\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-kibana-ssl-domain-search-e9fd9ca603",
+      "name": "Kibana SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `kibana`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"kibana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"kibana\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-kibana-title-domain-search-9d1dd0cd6c",
+      "name": "Kibana Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `kibana`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"kibana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "http-titles",
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"kibana\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-login-html-domain-search-367352a98e",
+      "name": "Login HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `login`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "authentication",
+        "html-content",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"login\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-login-ssl-domain-search-0edd45d4d5",
+      "name": "Login SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `login`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "authentication",
+        "keyword-search",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"login\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-login-title-domain-search-1d2eed36a8",
+      "name": "Login Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `login`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "authentication",
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"login\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-monitoring-html-domain-search-5609ff59c0",
+      "name": "Monitoring HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `monitoring`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"monitoring\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "html-content",
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"monitoring\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-monitoring-ssl-domain-search-3389797dfb",
+      "name": "Monitoring SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `monitoring`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"monitoring\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"monitoring\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-monitoring-title-domain-search-6e8685cf8d",
+      "name": "Monitoring Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `monitoring`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"monitoring\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "http-titles",
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"monitoring\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-openapi-html-domain-search-04b5182cd8",
+      "name": "OpenAPI HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `openapi`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"openapi\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "html-content",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"openapi\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-openapi-ssl-domain-search-bbb086761b",
+      "name": "OpenAPI SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `openapi`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"openapi\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "keyword-search",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"openapi\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-openapi-title-domain-search-6672b2fdf0",
+      "name": "OpenAPI Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `openapi`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"openapi\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"openapi\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-organization-company-search-e21590da9e",
+      "name": "Organization Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for `organization` fields that reference the target company. This helps identify branded or organization-linked public systems.",
+      "query_template": "org:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "inventory",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-portal-html-company-search-5b0e41bde6",
+      "name": "Portal HTML Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose html data references `portal`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.html:\"portal\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "dashboards",
+        "html-content",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.html:\"portal\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-portal-html-domain-search-ddf5f65e15",
+      "name": "Portal HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `portal`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "dashboards",
+        "html-content",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"portal\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-portal-ssl-domain-search-eb0da5b6ae",
+      "name": "Portal SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `portal`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "dashboards",
+        "keyword-search",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"portal\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-portal-title-company-search-06b64e7aeb",
+      "name": "Portal Title Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose title data references `portal`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.title:\"portal\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "dashboards",
+        "http-titles",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.title:\"portal\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-portal-title-domain-search-694b528a64",
+      "name": "Portal Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `portal`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "dashboards",
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"portal\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-product-domain-search-8a98289f73",
+      "name": "Product Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for `product` data associated with a target domain. This supports internet-facing asset discovery and surface review.",
+      "query_template": "hostname:{domain} product:\"{domain}\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "fingerprinting",
+        "product",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com product:\"example.com\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-product-reference-company-search-c7adda2d53",
+      "name": "Product Reference Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for `product reference` fields that reference the target company. This helps identify branded or organization-linked public systems.",
+      "query_template": "product:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "fingerprinting",
+        "product",
+        "recon",
+        "shodan"
+      ],
+      "example": "product:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-prometheus-html-domain-search-76ea78fac0",
+      "name": "Prometheus HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `prometheus`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"prometheus\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "html-content",
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"prometheus\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-prometheus-ssl-domain-search-e012ef6474",
+      "name": "Prometheus SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `prometheus`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"prometheus\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"prometheus\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-prometheus-title-domain-search-c582c53626",
+      "name": "Prometheus Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `prometheus`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"prometheus\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "http-titles",
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"prometheus\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-redoc-html-domain-search-e59fc7a5ad",
+      "name": "Redoc HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `redoc`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"redoc\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "html-content",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"redoc\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-redoc-ssl-domain-search-13e9409a8b",
+      "name": "Redoc SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `redoc`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"redoc\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "keyword-search",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"redoc\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-redoc-title-domain-search-3e014412dd",
+      "name": "Redoc Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `redoc`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"redoc\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"redoc\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-remote-access-html-domain-search-1a219a1743",
+      "name": "Remote Access HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `remote access`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"remote access\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "html-content",
+        "keyword-search",
+        "recon",
+        "remote-access",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"remote access\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-remote-access-ssl-domain-search-000105f3cb",
+      "name": "Remote Access SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `remote access`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"remote access\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "keyword-search",
+        "recon",
+        "remote-access",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"remote access\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-remote-access-title-domain-search-37c29ed929",
+      "name": "Remote Access Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `remote access`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"remote access\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "remote-access",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"remote access\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-ssl-reference-company-search-e422b639de",
+      "name": "SSL Reference Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for `ssl reference` fields that reference the target company. This helps identify branded or organization-linked public systems.",
+      "query_template": "ssl:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "branding",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "ssl:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-ssl-string-domain-search-40fb8c50dd",
+      "name": "SSL String Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for `ssl string` data associated with a target domain. This supports internet-facing asset discovery and surface review.",
+      "query_template": "ssl:\"{domain}\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "ssl:\"example.com\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-status-html-company-search-41bd80db23",
+      "name": "Status HTML Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose html data references `status`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.html:\"status\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "html-content",
+        "monitoring",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.html:\"status\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-status-html-domain-search-0edec058a5",
+      "name": "Status HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `status`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"status\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "html-content",
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"status\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-status-ssl-domain-search-680f835f90",
+      "name": "Status SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `status`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"status\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"status\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-status-title-company-search-07b9e0cf73",
+      "name": "Status Title Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose title data references `status`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.title:\"status\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "http-titles",
+        "monitoring",
+        "organization",
+        "recon",
+        "shodan"
+      ],
+      "example": "org:\"Example Corp\" http.title:\"status\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-status-title-domain-search-644359fe59",
+      "name": "Status Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `status`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"status\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "http-titles",
+        "keyword-search",
+        "monitoring",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"status\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-support-html-company-search-93ea3bbb6c",
+      "name": "Support HTML Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose html data references `support`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.html:\"support\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "html-content",
+        "organization",
+        "recon",
+        "shodan",
+        "support"
+      ],
+      "example": "org:\"Example Corp\" http.html:\"support\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-support-title-company-search-ed22fcae27",
+      "name": "Support Title Company Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for organization-linked systems whose title data references `support`. This supports branded service inventory review.",
+      "query_template": "org:\"{company}\" http.title:\"support\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "http-titles",
+        "organization",
+        "recon",
+        "shodan",
+        "support"
+      ],
+      "example": "org:\"Example Corp\" http.title:\"support\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-swagger-html-domain-search-38acd20bfd",
+      "name": "Swagger HTML Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose html data references `swagger`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.html:\"swagger\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "html-content",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.html:\"swagger\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-swagger-ssl-domain-search-492c4f7324",
+      "name": "Swagger SSL Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose ssl data references `swagger`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} ssl:\"swagger\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "keyword-search",
+        "recon",
+        "shodan",
+        "ssl"
+      ],
+      "example": "hostname:example.com ssl:\"swagger\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    },
+    {
+      "id": "shodan-swagger-title-domain-search-54b4298345",
+      "name": "Swagger Title Domain Search",
+      "category": "Shodan",
+      "engine": "Shodan",
+      "description": "Searches Shodan for target-domain hosts whose title data references `swagger`. This helps review internet-facing services tied to that target.",
+      "query_template": "hostname:{domain} http.title:\"swagger\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "http-titles",
+        "keyword-search",
+        "recon",
+        "shodan"
+      ],
+      "example": "hostname:example.com http.title:\"swagger\"",
+      "safe_mode": true,
+      "reference": "https://help.shodan.io/the-basics/search-query-fundamentals",
+      "launch_url": "https://www.shodan.io/search?query={query}"
+    }
+  ]
+}

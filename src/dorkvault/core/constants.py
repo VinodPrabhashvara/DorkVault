@@ -1,0 +1,16 @@
+"""Application-wide constants."""
+
+APP_NAME = "DorkVault"
+APP_VERSION = "0.1.0"
+ORGANIZATION_NAME = "DorkVault"
+THEME_LIGHT = "light"
+THEME_DARK = "dark"
+DEFAULT_THEME = THEME_LIGHT
+THEME_OPTIONS = (THEME_LIGHT, THEME_DARK)
+ALL_TECHNIQUES_LABEL = "All Techniques"
+LOG_FILE_NAME = "dorkvault.log"
+DEFAULT_BROWSER_BEHAVIOR = "new_tab"
+DEFAULT_RECENT_LIMIT = 25
+MIN_RECENT_LIMIT = 5
+MAX_RECENT_LIMIT = 100
+BROWSER_BEHAVIOR_OPTIONS = ("same_window", "new_window", "new_tab")

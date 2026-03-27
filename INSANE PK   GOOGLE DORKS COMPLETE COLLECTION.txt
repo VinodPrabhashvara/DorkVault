@@ -1,0 +1,579 @@
+================================================================================
+                     GOOGLE DORKS COMPLETE COLLECTION
+================================================================================
+
+       Salam Alikkam, fuck the systems, my friends. May TI.PK flourish.
+================================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [1] FILE & DOCUMENT DISCOVERY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+filetype:pdf "confidential"
+filetype:pdf "internal use only"
+filetype:pdf "not for distribution"
+filetype:xls "password"
+filetype:xls "username" "password"
+filetype:xlsx "confidential"
+filetype:doc "internal use only"
+filetype:doc "confidential"
+filetype:docx "private"
+filetype:txt "username" "password"
+filetype:txt "password list"
+filetype:log "error"
+filetype:log "username" "password"
+filetype:log "access denied"
+filetype:sql "INSERT INTO" "VALUES"
+filetype:sql "mysqldump"
+filetype:sql "CREATE TABLE"
+filetype:env "DB_PASSWORD"
+filetype:env "SECRET_KEY"
+filetype:env "API_KEY"
+filetype:config "database"
+filetype:config "password"
+filetype:cfg "password"
+filetype:cfg "username"
+filetype:ini "password"
+filetype:ini "database"
+filetype:bak "password"
+filetype:bak "config"
+filetype:zip "password"
+filetype:tar "password"
+filetype:json "api_key"
+filetype:json "password"
+filetype:yaml "password"
+filetype:yml "secret"
+filetype:pem "PRIVATE KEY"
+filetype:key "PRIVATE KEY"
+filetype:ppk site:github.com
+filetype:p12 "certificate"
+filetype:csv "password"
+filetype:csv "email" "phone"
+filetype:xls inurl:"email.xls"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [2] LOGIN & ADMIN PANELS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+intitle:"admin login" inurl:admin
+inurl:/admin/login.php
+inurl:/admin/index.php
+inurl:/admin/dashboard
+inurl:wp-admin
+inurl:wp-login.php
+inurl:"/phpmyadmin/"
+intitle:"phpMyAdmin" inurl:"/phpmyadmin/"
+intitle:"Login" inurl:"/login.php"
+inurl:"cpanel" intitle:"login"
+inurl:"/administrator/" intitle:"login"
+inurl:"/administrator/index.php"
+inurl:"/user/login"
+inurl:"/account/login"
+inurl:"/signin"
+inurl:"/backend/login"
+inurl:"/panel/login"
+inurl:"/controlpanel"
+inurl:"/webadmin"
+inurl:"/siteadmin"
+inurl:"/moderator/login"
+inurl:"/master/login"
+inurl:"/superadmin"
+inurl:"/system/login"
+intitle:"Admin Panel" inurl:admin
+intitle:"Control Panel" inurl:cpanel
+intitle:"Plesk" inurl:"/login_up.php"
+intitle:"cPanel" inurl:2082
+intitle:"WHM" inurl:2086
+inurl:":10000" intitle:"Webmin"
+inurl:":8080/manager/html" intitle:"Tomcat"
+inurl:":8443/manager/html"
+intitle:"Grafana" inurl:"/login"
+inurl:"/jenkins" intitle:"Dashboard"
+inurl:"/solr/admin"
+inurl:"/kibana"
+intitle:"Jupyter" inurl:"/tree"
+inurl:"/portainer/"
+inurl:":9200/_cat" intitle:"elasticsearch"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [3] OPEN CAMERAS & IoT DEVICES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+inurl:"view/index.shtml"
+intitle:"webcamXP 5"
+inurl:"/axis-cgi/mjpg"
+intitle:"Live View / - AXIS"
+inurl:"/view/viewer_index.shtml"
+inurl:"top.htm" intitle:"Network Camera"
+intitle:"Network Camera" inurl:"/view.shtml"
+intitle:"WJ-NT104" inurl:camera
+inurl:"MultiCameraFrame?Mode="
+intitle:"EvoCam" inurl:"webcam.html"
+inurl:"/video.mjpg"
+intitle:"ip kamera" inurl:view
+inurl:":8080/video.mjpg"
+inurl:"/CgiStart?page="
+intitle:"Toshiba Network Camera"
+intitle:"i-Catcher Console - Web Monitor"
+intitle:"MOBOTIX M1" inurl:"/control/userimage.html"
+intitle:"Mega-Pixel IP Camera" inurl:view
+inurl:"lvappl.htm"
+inurl:"/snap.jpg" intitle:"network camera"
+intitle:"D-Link" inurl:"/video.cgi"
+intitle:"D-LinkDCS" inurl:video.cgi
+inurl:"/ViewerFrame?Mode="
+inurl:"/img/video.mjpeg"
+inurl:"image?resolution=320x240"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [4] EXPOSED DATABASES & CONFIG FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+inurl:"/phpmyadmin/" intitle:"phpMyAdmin"
+filetype:sql "mysqldump"
+inurl:".env" "DB_HOST"
+inurl:".env" "DB_PASSWORD"
+intitle:"index of" "database.sql"
+inurl:"/wp-config.php"
+inurl:"/config.php" intext:"db_password"
+inurl:"/configuration.php" intext:"password"
+inurl:"/settings.php" intext:"database"
+inurl:"/database.yml"
+inurl:"/database.php" intext:"password"
+inurl:"/db_connect.php"
+inurl:"/dbconfig.php"
+inurl:"/connection.php" intext:"password"
+inurl:"config.inc.php" intext:"password"
+inurl:"config.php" intext:"mysql_connect"
+filetype:env "MAIL_PASSWORD"
+filetype:env "REDIS_PASSWORD"
+filetype:env "STRIPE_SECRET"
+filetype:env "PAYPAL_SECRET"
+filetype:env "TWILIO_AUTH"
+intext:"DB_CONNECTION=mysql" filetype:env
+intext:"DB_USERNAME=" filetype:env
+ext:sql intext:"password" intext:"username"
+ext:sqlite intext:"password"
+inurl:"/.git" intitle:"index of"
+inurl:"/.svn" intitle:"index of"
+inurl:"/.DS_Store"
+intitle:"index of" ".git"
+intitle:"index of" "wp-config.php.bak"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [5] DIRECTORY LISTINGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+intitle:"index of" "parent directory"
+intitle:"index of" passwd
+intitle:"index of" ".htpasswd"
+intitle:"index of" "backup"
+intitle:"index of" "private"
+intitle:"index of" mp3
+intitle:"index of" pdf
+intitle:"index of" "secret"
+intitle:"index of" "uploads"
+intitle:"index of" "admin"
+intitle:"index of" "config"
+intitle:"index of" ".env"
+intitle:"index of" "logs"
+intitle:"index of" "database"
+intitle:"index of" "financial"
+intitle:"index of" "invoice"
+intitle:"index of" "employee"
+intitle:"index of" "salary"
+intitle:"index of" "resume"
+intitle:"index of" "ssh"
+intitle:"index of" "keys"
+intitle:"index of" "credentials"
+intitle:"index of" "wwwroot"
+intitle:"index of" "htdocs"
+intitle:"index of" "src"
+intitle:"index of" "source"
+intitle:"index of" inurl:ftp
+intitle:"index of" inurl:backup
+intitle:"index of" inurl:temp
+intitle:"index of" "id_rsa"
+intitle:"index of" ".bash_history"
+intitle:"index of" "shadow"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [6] EXPOSED CREDENTIALS & API KEYS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+intext:"api_key" filetype:txt
+intext:"secret_key" filetype:env
+intext:"AWS_ACCESS_KEY_ID"
+intext:"AWS_SECRET_ACCESS_KEY"
+intext:"BEGIN RSA PRIVATE KEY"
+intext:"BEGIN DSA PRIVATE KEY"
+intext:"BEGIN EC PRIVATE KEY"
+intext:"BEGIN OPENSSH PRIVATE KEY"
+intext:"password=" filetype:log
+intext:"token=" filetype:json
+intext:"Authorization: Bearer" filetype:log
+intext:"client_secret" filetype:json
+intext:"GITHUB_TOKEN" filetype:env
+intext:"SLACK_TOKEN" filetype:env
+intext:"TELEGRAM_BOT_TOKEN"
+intext:"google_api_key" filetype:js
+intext:"firebase_api_key"
+intext:"SENDGRID_API_KEY"
+intext:"mailchimp_api_key"
+intext:"braintree_private_key"
+intext:"stripe_secret_key"
+intext:"consumer_secret" filetype:txt
+intext:"oauth_token" filetype:txt
+intext:"x-api-key" filetype:log
+site:github.com "api_key" filetype:env
+site:github.com "password" filetype:env
+site:github.com "secret" filetype:yml
+site:github.com inurl:"/.env"
+site:pastebin.com "api_key"
+site:pastebin.com "password"
+site:pastebin.com "BEGIN RSA PRIVATE KEY"
+site:trello.com "password"
+site:docs.google.com "api_key"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [7] VULNERABLE PAGES & PARAMETERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+inurl:"?id=" site:example.com
+inurl:"?page=" inurl:".php"
+inurl:"search.php?q="
+inurl:"index.php?option=com_"
+inurl:"/cgi-bin/" filetype:cgi
+inurl:"?redirect="
+inurl:"?url="
+inurl:"?return="
+inurl:"?next="
+inurl:"?goto="
+inurl:"?dest="
+inurl:"?continue="
+inurl:"?file="
+inurl:"?path="
+inurl:"?dir="
+inurl:"?include="
+inurl:"?require="
+inurl:"?load="
+inurl:"?template="
+inurl:"?view="
+inurl:"?cat="
+inurl:"?pid="
+inurl:"?pId="
+inurl:"?product_id="
+inurl:"?item="
+inurl:"?action="
+inurl:"?cmd="
+inurl:"?exec="
+inurl:"?command="
+inurl:"?user="
+inurl:"?login="
+inurl:"?name=" inurl:".php"
+inurl:"?search=" inurl:".php"
+inurl:"?q=" inurl:".php"
+inurl:"?keyword=" inurl:".php"
+inurl:"?query=" inurl:".php"
+inurl:"?debug=" inurl:".php"
+inurl:"?test=" inurl:".php"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [8] SERVER & NETWORK INFO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+intitle:"Apache HTTP Server" intitle:"test page"
+intitle:"Welcome to nginx"
+intitle:"IIS Windows Server"
+intitle:"Apache Tomcat" inurl:8080
+intitle:"Test Page for the Apache"
+intitle:"Apache2 Ubuntu Default Page"
+intitle:"OpenSSL" "test page"
+intext:"Server: Apache" filetype:log
+intext:"Server: nginx" filetype:log
+intitle:"RouterOS" inurl:"/winbox"
+intitle:"Cisco" inurl:"/level/15/exec"
+intitle:"Cisco CallManager"
+inurl:"/cgi-bin/luci" intitle:"LuCI"
+intitle:"pfSense" inurl:"/index.php"
+intitle:"OpenWrt" inurl:"/cgi-bin/luci"
+inurl:":8291" intitle:"RouterOS"
+inurl:":8888" intitle:"Jupyter"
+inurl:":9090" intitle:"Prometheus"
+inurl:":3000" intitle:"Grafana"
+inurl:":5601" intitle:"Kibana"
+inurl:":9200" intitle:"Elasticsearch"
+inurl:":6379" intitle:"Redis"
+inurl:":27017" intitle:"MongoDB"
+inurl:":5432" intitle:"PostgreSQL"
+inurl:":3306" intitle:"MySQL"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [9] ERROR MESSAGES & INFO LEAKAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+intitle:"PHP Parse error"
+intitle:"PHP Warning"
+intitle:"PHP Fatal error"
+intext:"Warning: mysql_connect()"
+intext:"Warning: mysql_fetch"
+intext:"Warning: include()"
+intext:"Warning: require()"
+intext:"ORA-00933: SQL command"
+intext:"ORA-12541: TNS"
+intext:"Microsoft OLE DB Provider"
+intext:"ODBC SQL Server Driver"
+intext:"supplied argument is not a valid MySQL"
+intext:"mysql_num_rows()"
+intext:"sql syntax near" "mysql_fetch"
+intext:"stack trace" filetype:txt
+intext:"Call Stack" filetype:log
+intext:"Exception in thread"
+intext:"Uncaught exception"
+intext:"java.lang.NullPointerException"
+intext:"at com.microsoft." filetype:log
+intext:"System.Web.HttpException"
+intext:"ASP.NET is configured to show verbose error messages"
+intext:"Traceback (most recent call last)"
+intitle:"Error 500" intext:"Internal Server Error"
+intitle:"Error 404" intext:"Not Found"
+intext:"Index of /" intitle:"index of"
+intext:"Connection refused" filetype:log
+intext:"Access denied for user" filetype:log
+intext:"Login failed for user" filetype:log
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [10] EMAIL & PERSONAL DATA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+filetype:xls "email" "phone"
+filetype:csv "@gmail.com"
+filetype:csv "@yahoo.com"
+intext:"@" filetype:txt "password"
+filetype:xls inurl:"email.xls"
+filetype:xls "phone number" "address"
+filetype:xls "SSN" OR "social security"
+filetype:csv "credit card"
+filetype:xls "date of birth"
+filetype:csv "passport number"
+intext:"name" "email" "phone" filetype:xls
+intext:"customer list" filetype:xls
+intext:"employee list" filetype:xls
+intext:"member list" filetype:csv
+intext:"contact list" filetype:xlsx
+filetype:pdf "curriculum vitae" "phone"
+filetype:pdf "resume" "email" "address"
+filetype:doc "personal information" "date of birth"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [11] OSINT / SOCIAL ENGINEERING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+site:linkedin.com "works at"
+site:linkedin.com inurl:"/in/" "email"
+site:twitter.com "email" "@gmail.com"
+site:facebook.com "phone" "email"
+site:pastebin.com "password"
+site:pastebin.com "@gmail.com" "password"
+site:github.com "password" filetype:env
+site:github.com "secret_key"
+site:github.com "api_key"
+site:trello.com "password"
+site:trello.com "username"
+site:docs.google.com "confidential"
+site:docs.google.com "not for distribution"
+site:s3.amazonaws.com "confidential"
+site:s3.amazonaws.com filetype:xls
+site:blob.core.windows.net filetype:pdf
+site:storage.googleapis.com filetype:sql
+site:dropbox.com "password"
+site:box.com "confidential"
+site:scribd.com "username" "password"
+site:slideshare.net "confidential"
+site:ideone.com "password"
+site:codebeautify.org "api_key"
+site:codepen.io "password"
+site:jsfiddle.net "api_key"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [12] CMS SPECIFIC DORKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+--- WordPress ---
+inurl:"/wp-content/uploads/"
+inurl:"/wp-includes/"
+inurl:"/?p=" intitle:"WordPress"
+inurl:"/wp-json/wp/v2/users"
+inurl:"/xmlrpc.php" intitle:"XML-RPC"
+inurl:"/wp-content/debug.log"
+inurl:"/?author=1" inurl:"wordpress"
+
+--- Joomla ---
+inurl:"/administrator/index.php" intitle:"Joomla"
+inurl:"/index.php?option=com_users"
+inurl:"/index.php?option=com_config"
+inurl:"/configuration.php-dist"
+
+--- Drupal ---
+inurl:"/user/login" intitle:"Drupal"
+inurl:"/sites/default/settings.php"
+inurl:"/?q=user/login" intitle:"Drupal"
+
+--- Magento ---
+inurl:"/index.php/admin/" intitle:"Magento"
+inurl:"/downloader/" intitle:"Magento"
+inurl:"/app/etc/local.xml"
+
+--- Laravel ---
+inurl:"/.env" intext:"APP_KEY"
+inurl:"/storage/logs/laravel.log"
+inurl:"/_debugbar"
+
+--- Django ---
+intext:"Django Version" intitle:"Django"
+intext:"CSRF verification failed"
+inurl:"/admin/" intitle:"Django site admin"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [13] VPN, FTP & REMOTE ACCESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+inurl:"ftp://" intitle:"index of"
+inurl:ftp "password" "username" filetype:txt
+inurl:"ftp://" "anonymous" "password"
+intitle:"VPN Login" inurl:vpn
+intitle:"Cisco VPN" inurl:login
+intitle:"Pulse Secure" inurl:"/dana-na/auth"
+intitle:"Fortinet VPN" inurl:"/remote/login"
+intitle:"GlobalProtect" inurl:"/global-protect/login"
+intitle:"AnyConnect" inurl:"/+CSCOE+/logon.html"
+inurl:"/remote/login" intitle:"FortiGate"
+intitle:"Remote Desktop" inurl:"/rdweb/pages/en-US/login.aspx"
+intitle:"SSL-VPN" inurl:"/remote/login"
+inurl:":3389" intitle:"Remote Desktop"
+inurl:":22" intitle:"SSH"
+inurl:":21" intitle:"FTP"
+inurl:":23" intitle:"Telnet"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [14] CLOUD & STORAGE MISCONFIGURATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+site:s3.amazonaws.com filetype:xls
+site:s3.amazonaws.com filetype:csv
+site:s3.amazonaws.com filetype:sql
+site:s3.amazonaws.com filetype:pdf "confidential"
+site:blob.core.windows.net filetype:pdf
+site:blob.core.windows.net filetype:xls
+site:storage.googleapis.com filetype:sql
+site:storage.googleapis.com "password"
+inurl:"s3.amazonaws.com" "index of"
+inurl:"blob.core.windows.net" filetype:txt
+site:onedrive.live.com "password"
+site:drive.google.com "confidential"
+inurl:"sharepoint.com" "confidential" filetype:pdf
+inurl:"sharepoint.com" filetype:xlsx "password"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [15] BUG BOUNTY FOCUSED DORKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+site:example.com inurl:api
+site:example.com inurl:v1
+site:example.com inurl:v2
+site:example.com inurl:swagger
+site:example.com inurl:graphql
+site:example.com inurl:dev
+site:example.com inurl:staging
+site:example.com inurl:beta
+site:example.com inurl:test
+site:example.com inurl:backup
+site:example.com intitle:"index of"
+site:example.com filetype:env
+site:example.com filetype:log
+site:example.com filetype:sql
+site:example.com filetype:config
+site:example.com ext:bak
+site:example.com ext:old
+site:example.com ext:swp
+site:example.com ext:tmp
+site:example.com inurl:admin
+site:example.com inurl:upload
+site:example.com inurl:download
+site:example.com inurl:debug
+site:example.com inurl:"phpinfo.php"
+site:example.com inurl:"info.php"
+site:example.com inurl:".git"
+site:example.com inurl:robots.txt
+site:example.com inurl:sitemap.xml
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [16] ADVANCED GOOGLE OPERATORS REFERENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPERATOR         USAGE EXAMPLE                         DESCRIPTION
+---------------------------------------------------------------------------
+site:            site:example.com                      Limit to a domain
+intitle:         intitle:"login"                       Word in page title
+allintitle:      allintitle:"admin login"              All words in title
+inurl:           inurl:"admin"                         Word in URL
+allinurl:        allinurl:"admin login"                All words in URL
+intext:          intext:"password"                     Word in body text
+allintext:       allintext:"user pass"                 All words in body
+filetype:        filetype:pdf                          Specific file type
+ext:             ext:sql                               File extension
+cache:           cache:example.com                     Cached version
+link:            link:example.com                      Pages linking to URL
+related:         related:example.com                   Similar sites
+info:            info:example.com                      Info about a page
+define:          define:phishing                       Definition
+OR               "admin" OR "login"                    Either term
+AND              "admin" AND "login"                   Both terms
+-                "admin" -"login"                      Exclude term
+*                "admin * login"                       Wildcard
+""               "exact phrase"                        Exact match
+..               price 100..500                        Number range
+AROUND(n)        admin AROUND(3) login                 Proximity search
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ [17] USEFUL DORK COMBINATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+site:example.com filetype:pdf intext:"confidential"
+site:example.com inurl:admin intitle:"login"
+site:example.com intext:"password" filetype:txt
+intitle:"index of" inurl:backup filetype:zip
+inurl:admin intitle:"login" intext:"password"
+filetype:sql intext:"password" intext:"username"
+filetype:env intext:"DB_PASSWORD" intext:"APP_KEY"
+site:github.com "api_key" filetype:env
+intitle:"phpMyAdmin" inurl:"/phpmyadmin/" intext:"server"
+inurl:"/wp-json/wp/v2/users" intitle:"WordPress"
+filetype:log intext:"password" intext:"username" intext:"login"
+intitle:"index of" inurl:".git" "config"
+intext:"BEGIN RSA PRIVATE KEY" filetype:pem
+intext:"AWS_ACCESS_KEY_ID" filetype:env
+site:pastebin.com intext:"username" intext:"password" intext:"@gmail.com"
+
+
+================================================================================
+                            Team insane pk official
+================================================================================
+

@@ -1,0 +1,1520 @@
+{
+  "category_id": "ct_logs",
+  "category_name": "CT Logs",
+  "description": "Certificate Transparency lookup queries for reviewing public certificate metadata related to a target domain or organization.",
+  "display_order": 90,
+  "techniques": [
+    {
+      "id": "ct_logs-admin-host-certificate-search-d367d18bc9",
+      "name": "Admin Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `admin.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "admin.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "admin.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=admin.{domain}"
+    },
+    {
+      "id": "ct_logs-api-host-certificate-search-f17c9b6e1f",
+      "name": "Api Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `api.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "api.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "api.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=api.{domain}"
+    },
+    {
+      "id": "ct_logs-app-host-certificate-search-aeb7c8f25a",
+      "name": "App Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `app.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "app.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "app.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=app.{domain}"
+    },
+    {
+      "id": "ct_logs-assets-host-certificate-search-03413faf68",
+      "name": "Assets Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `assets.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "assets.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "assets.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=assets.{domain}"
+    },
+    {
+      "id": "ct_logs-auth-host-certificate-search-89a0a4e8aa",
+      "name": "Auth Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `auth.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "auth.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "auth.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=auth.{domain}"
+    },
+    {
+      "id": "ct_logs-beta-host-certificate-search-f3d36da73f",
+      "name": "Beta Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `beta.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "beta.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "beta.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=beta.{domain}"
+    },
+    {
+      "id": "ct_logs-blog-host-certificate-search-bd162d4fd6",
+      "name": "Blog Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `blog.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "blog.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "blog.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=blog.{domain}"
+    },
+    {
+      "id": "ct_logs-cdn-host-certificate-search-f96f7fe414",
+      "name": "Cdn Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `cdn.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "cdn.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "cdn.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=cdn.{domain}"
+    },
+    {
+      "id": "ct_logs-console-host-certificate-search-8b0d1944f2",
+      "name": "Console Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `console.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "console.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "console.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=console.{domain}"
+    },
+    {
+      "id": "ct_logs-cpanel-host-certificate-search-8d2e1199a0",
+      "name": "Cpanel Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `cpanel.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "cpanel.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "cpanel.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=cpanel.{domain}"
+    },
+    {
+      "id": "ct_logs-customers-host-certificate-search-ebfff770e5",
+      "name": "Customers Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `customers.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "customers.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "customers.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=customers.{domain}"
+    },
+    {
+      "id": "ct_logs-dev-host-certificate-search-4530c9e38d",
+      "name": "Dev Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `dev.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "dev.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "dev.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=dev.{domain}"
+    },
+    {
+      "id": "ct_logs-developers-host-certificate-search-fef34c1ec0",
+      "name": "Developers Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `developers.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "developers.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "developers.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=developers.{domain}"
+    },
+    {
+      "id": "ct_logs-docs-host-certificate-search-ce3c7fbfd7",
+      "name": "Docs Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `docs.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "docs.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "docs.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=docs.{domain}"
+    },
+    {
+      "id": "ct_logs-domain-search-7f59554a04",
+      "name": "Domain Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for public certificate metadata tied to the target string.",
+      "query_template": "{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "domain",
+        "history"
+      ],
+      "example": "example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q={query}"
+    },
+    {
+      "id": "ct_logs-download-host-certificate-search-4476332969",
+      "name": "Download Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `download.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "download.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "download.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=download.{domain}"
+    },
+    {
+      "id": "ct_logs-edge-host-certificate-search-8cf4274899",
+      "name": "Edge Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `edge.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "edge.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "edge.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=edge.{domain}"
+    },
+    {
+      "id": "ct_logs-gateway-host-certificate-search-fd16d0b39a",
+      "name": "Gateway Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `gateway.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "gateway.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "gateway.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=gateway.{domain}"
+    },
+    {
+      "id": "ct_logs-git-host-certificate-search-b43b6ba397",
+      "name": "Git Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `git.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "git.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "git.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=git.{domain}"
+    },
+    {
+      "id": "ct_logs-grafana-host-certificate-search-6a720fccf1",
+      "name": "Grafana Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `grafana.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "grafana.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "grafana.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=grafana.{domain}"
+    },
+    {
+      "id": "ct_logs-help-host-certificate-search-6136f752a0",
+      "name": "Help Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `help.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "help.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "help.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=help.{domain}"
+    },
+    {
+      "id": "ct_logs-id-host-certificate-search-736214e7bb",
+      "name": "Id Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `id.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "id.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "id.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=id.{domain}"
+    },
+    {
+      "id": "ct_logs-img-host-certificate-search-ed6185c3e7",
+      "name": "Img Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `img.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "img.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "img.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=img.{domain}"
+    },
+    {
+      "id": "ct_logs-jenkins-host-certificate-search-14aceb871c",
+      "name": "Jenkins Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `jenkins.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "jenkins.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "jenkins.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=jenkins.{domain}"
+    },
+    {
+      "id": "ct_logs-kibana-host-certificate-search-1f5395e72a",
+      "name": "Kibana Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `kibana.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "kibana.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "kibana.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=kibana.{domain}"
+    },
+    {
+      "id": "ct_logs-login-host-certificate-search-60782a55c0",
+      "name": "Login Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `login.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "login.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "login.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=login.{domain}"
+    },
+    {
+      "id": "ct_logs-mail-host-certificate-search-70e10c624d",
+      "name": "Mail Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `mail.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "mail.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "mail.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=mail.{domain}"
+    },
+    {
+      "id": "ct_logs-media-host-certificate-search-f02b28e282",
+      "name": "Media Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `media.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "media.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "media.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=media.{domain}"
+    },
+    {
+      "id": "ct_logs-mobile-host-certificate-search-d67774f301",
+      "name": "Mobile Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `mobile.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "mobile.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "mobile.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=mobile.{domain}"
+    },
+    {
+      "id": "ct_logs-monitoring-host-certificate-search-3d1e2b5f96",
+      "name": "Monitoring Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `monitoring.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "monitoring.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "monitoring.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=monitoring.{domain}"
+    },
+    {
+      "id": "ct_logs-organization-string-search-a70e1e4b05",
+      "name": "Organization String Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for public certificate metadata tied to the target string.",
+      "query_template": "{org}",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "brand-monitoring",
+        "certificate-subjects",
+        "crt-sh",
+        "ct-logs",
+        "organization"
+      ],
+      "example": "example-org",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q={query}"
+    },
+    {
+      "id": "ct_logs-partners-host-certificate-search-26acbb369a",
+      "name": "Partners Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `partners.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "partners.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "partners.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=partners.{domain}"
+    },
+    {
+      "id": "ct_logs-portal-host-certificate-search-115d30a041",
+      "name": "Portal Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `portal.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "portal.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "portal.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=portal.{domain}"
+    },
+    {
+      "id": "ct_logs-prod-host-certificate-search-1ea888326d",
+      "name": "Prod Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `prod.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "prod.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "prod.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=prod.{domain}"
+    },
+    {
+      "id": "ct_logs-remote-host-certificate-search-c3ffb7da44",
+      "name": "Remote Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `remote.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "remote.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "remote.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=remote.{domain}"
+    },
+    {
+      "id": "ct_logs-search-host-certificate-search-6eafba12c1",
+      "name": "Search Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `search.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "search.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "search.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=search.{domain}"
+    },
+    {
+      "id": "ct_logs-shop-host-certificate-search-3c074b37bd",
+      "name": "Shop Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `shop.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "shop.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "shop.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=shop.{domain}"
+    },
+    {
+      "id": "ct_logs-smtp-host-certificate-search-6559275de2",
+      "name": "Smtp Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `smtp.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "smtp.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "smtp.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=smtp.{domain}"
+    },
+    {
+      "id": "ct_logs-sso-host-certificate-search-557d805428",
+      "name": "Sso Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `sso.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "sso.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "sso.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=sso.{domain}"
+    },
+    {
+      "id": "ct_logs-stage-host-certificate-search-2f2e1868e6",
+      "name": "Stage Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `stage.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "stage.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "stage.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=stage.{domain}"
+    },
+    {
+      "id": "ct_logs-staging-host-certificate-search-1c1ec2861e",
+      "name": "Staging Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `staging.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "staging.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "staging.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=staging.{domain}"
+    },
+    {
+      "id": "ct_logs-static-host-certificate-search-1c31faf8c6",
+      "name": "Static Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `static.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "static.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "static.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=static.{domain}"
+    },
+    {
+      "id": "ct_logs-status-host-certificate-search-a244d99c06",
+      "name": "Status Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `status.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "status.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "status.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=status.{domain}"
+    },
+    {
+      "id": "ct_logs-support-host-certificate-search-54ff1ef837",
+      "name": "Support Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `support.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "support.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "support.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=support.{domain}"
+    },
+    {
+      "id": "ct_logs-test-host-certificate-search-04799c8774",
+      "name": "Test Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `test.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "test.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "test.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=test.{domain}"
+    },
+    {
+      "id": "ct_logs-upload-host-certificate-search-118bbfe8d4",
+      "name": "Upload Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `upload.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "upload.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "upload.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=upload.{domain}"
+    },
+    {
+      "id": "ct_logs-vpn-host-certificate-search-5cbe581d69",
+      "name": "Vpn Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `vpn.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "vpn.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "vpn.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=vpn.{domain}"
+    },
+    {
+      "id": "ct_logs-webmail-host-certificate-search-c79d6b5703",
+      "name": "Webmail Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `webmail.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "webmail.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "webmail.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=webmail.{domain}"
+    },
+    {
+      "id": "ct_logs-wiki-host-certificate-search-af9e8b1fcc",
+      "name": "Wiki Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `wiki.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "wiki.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "wiki.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=wiki.{domain}"
+    },
+    {
+      "id": "ct_logs-wildcard-api-certificate-search-a45242c280",
+      "name": "Wildcard API Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for public certificate metadata tied to the target string.",
+      "query_template": "%.api.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "crt-sh",
+        "ct-logs",
+        "subdomains",
+        "wildcard"
+      ],
+      "example": "%.api.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q={query}"
+    },
+    {
+      "id": "ct_logs-wildcard-certificate-search-5f62aadef7",
+      "name": "Wildcard Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for public certificate metadata tied to the target string.",
+      "query_template": "%.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "subdomains",
+        "wildcard"
+      ],
+      "example": "%.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q={query}"
+    },
+    {
+      "id": "ct_logs-wildcard-dev-certificate-search-a881f6c8bb",
+      "name": "Wildcard Dev Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for public certificate metadata tied to the target string.",
+      "query_template": "%.dev.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "crt-sh",
+        "ct-logs",
+        "environments",
+        "subdomains",
+        "wildcard"
+      ],
+      "example": "%.dev.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q={query}"
+    },
+    {
+      "id": "ct_logs-wildcard-stage-certificate-search-523bd91e06",
+      "name": "Wildcard Stage Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for public certificate metadata tied to the target string.",
+      "query_template": "%.stage.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "crt-sh",
+        "ct-logs",
+        "environments",
+        "subdomains",
+        "wildcard"
+      ],
+      "example": "%.stage.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q={query}"
+    },
+    {
+      "id": "ct_logs-wildcard-status-certificate-search-3e15268b65",
+      "name": "Wildcard Status Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for public certificate metadata tied to the target string.",
+      "query_template": "%.status.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "crt-sh",
+        "ct-logs",
+        "monitoring",
+        "subdomains",
+        "wildcard"
+      ],
+      "example": "%.status.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q={query}"
+    },
+    {
+      "id": "ct_logs-wildcard-vpn-certificate-search-d920009dce",
+      "name": "Wildcard VPN Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for public certificate metadata tied to the target string.",
+      "query_template": "%.vpn.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "crt-sh",
+        "ct-logs",
+        "remote-access",
+        "subdomains",
+        "wildcard"
+      ],
+      "example": "%.vpn.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q={query}"
+    },
+    {
+      "id": "ct_logs-www-host-certificate-search-b708c57789",
+      "name": "Www Host Certificate Search",
+      "category": "CT Logs",
+      "engine": "crt.sh",
+      "description": "Searches certificate transparency records for `www.{domain}`. This helps identify current or historical hostnames that appeared in public certificate issuance.",
+      "query_template": "www.{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "certificates",
+        "crt-sh",
+        "ct-logs",
+        "history",
+        "subdomains"
+      ],
+      "example": "www.example.com",
+      "safe_mode": true,
+      "reference": "https://crt.sh/",
+      "launch_url": "https://crt.sh/?q=www.{domain}"
+    }
+  ]
+}

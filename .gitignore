@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*$py.class
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+pip-wheel-metadata/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+*.spec
+*.manifest
+
+# IDEs
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs and local runtime files
+*.log
+logs/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Qt / PySide6
+.qt_for_python/
+*.qmlc
+*.jsc

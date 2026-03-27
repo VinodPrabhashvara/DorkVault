@@ -1,0 +1,51 @@
+
+---
+
+# 2. `LICENSE`
+
+Save this as `LICENSE`
+
+```text
+DorkVault
+Copyright (c) 2026 Vinod Prabhashvara
+All Rights Reserved.
+
+This repository and its contents, including but not limited to the executable
+software, documentation, branding, design, interface elements, and associated
+materials, are proprietary and confidential.
+
+No permission is granted to any person or organization to copy, modify,
+distribute, sublicense, sell, lease, republish, upload, transmit, reverse
+engineer, decompile, disassemble, or create derivative works from this
+software or any part of it, except with prior written permission from the
+copyright holder.
+
+Permission is granted only to download and use the released binary form of
+this software for lawful and authorized purposes, subject to the following
+conditions:
+
+1. The software is provided "as is", without warranty of any kind, express or
+   implied, including but not limited to the warranties of merchantability,
+   fitness for a particular purpose, and noninfringement.
+
+2. In no event shall the author or copyright holder be liable for any claim,
+   damages, or other liability, whether in an action of contract, tort, or
+   otherwise, arising from, out of, or in connection with the software or the
+   use of or other dealings in the software.
+
+3. Users are solely responsible for ensuring that their use of this software
+   complies with all applicable laws, regulations, contracts, and authorization
+   requirements.
+
+4. This software may only be used for lawful, authorized, and ethical
+   purposes.
+
+5. Redistribution of this software, whether modified or unmodified, is not
+   permitted without prior written permission from the copyright holder.
+
+6. Reverse engineering, decompilation, disassembly, or other attempts to derive
+   source code, internal logic, or protected assets from the distributed binary
+   are prohibited to the maximum extent permitted by law.
+
+For licensing inquiries, permissions, or commercial use requests, contact the
+copyright holder.

@@ -1,0 +1,1620 @@
+{
+  "category_id": "wayback_queries",
+  "category_name": "Wayback",
+  "description": "Archive lookups for historical content, routes, scripts, and endpoints visible in the Wayback Machine.",
+  "display_order": 30,
+  "techniques": [
+    {
+      "id": "wayback-admin-host-history-dc738294a1",
+      "name": "Admin Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `admin.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "admin.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "admin.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/admin.{domain}/*"
+    },
+    {
+      "id": "wayback-admin-path-history-35650f7bfc",
+      "name": "Admin Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `admin`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived admin history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived admin history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*admin*"
+    },
+    {
+      "id": "wayback-api-host-history-31dcd8a9df",
+      "name": "Api Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `api.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "api.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "api.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/api.{domain}/*"
+    },
+    {
+      "id": "wayback-api-path-history-1b22ba5116",
+      "name": "API Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `api`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived api history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived api history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*api*"
+    },
+    {
+      "id": "wayback-api-v1-history-41ee371306",
+      "name": "API V1 History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `api/v1`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived api/v1 history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived api/v1 history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*api/v1*"
+    },
+    {
+      "id": "wayback-api-v2-history-1de562f6d8",
+      "name": "API V2 History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `api/v2`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived api/v2 history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived api/v2 history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*api/v2*"
+    },
+    {
+      "id": "wayback-assets-host-history-c6c6765329",
+      "name": "Assets Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `assets.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "assets.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "assets.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/assets.{domain}/*"
+    },
+    {
+      "id": "wayback-assets-path-history-5ac54df3c8",
+      "name": "Assets Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `assets`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived assets history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "assets",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived assets history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*assets*"
+    },
+    {
+      "id": "wayback-auth-host-history-2f501d448a",
+      "name": "Auth Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `auth.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "auth.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "auth.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/auth.{domain}/*"
+    },
+    {
+      "id": "wayback-auth-path-history-2caa5315d8",
+      "name": "Auth Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `auth`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived auth history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "authentication",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived auth history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*auth*"
+    },
+    {
+      "id": "wayback-backup-path-history-0bcb0da6b5",
+      "name": "Backup Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `backup`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived backup history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "backups",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived backup history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*backup*"
+    },
+    {
+      "id": "wayback-beta-host-history-5d27df1c19",
+      "name": "Beta Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `beta.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "beta.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "beta.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/beta.{domain}/*"
+    },
+    {
+      "id": "wayback-blog-host-history-3be021c21f",
+      "name": "Blog Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `blog.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "blog.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "blog.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/blog.{domain}/*"
+    },
+    {
+      "id": "wayback-build-path-history-5db99bdf3e",
+      "name": "Build Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `build`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived build history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "assets",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived build history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*build*"
+    },
+    {
+      "id": "wayback-callback-history-20cc6e1b6b",
+      "name": "Callback History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `callback`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived callback history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived callback history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*callback*"
+    },
+    {
+      "id": "wayback-cdn-host-history-18bf7614bc",
+      "name": "Cdn Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `cdn.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "cdn.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "cdn.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/cdn.{domain}/*"
+    },
+    {
+      "id": "wayback-change-log-history-5589d45e2c",
+      "name": "Change Log History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `changelog`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived changelog history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "documentation",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived changelog history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*changelog*"
+    },
+    {
+      "id": "wayback-console-host-history-684f651903",
+      "name": "Console Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `console.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "console.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "console.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/console.{domain}/*"
+    },
+    {
+      "id": "wayback-dev-host-history-f640cb7fcd",
+      "name": "Dev Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `dev.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "dev.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "dev.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/dev.{domain}/*"
+    },
+    {
+      "id": "wayback-developer-host-history-fb4ddd4aae",
+      "name": "Developer Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `developer.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "developer.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "developer.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/developer.{domain}/*"
+    },
+    {
+      "id": "wayback-docs-history-1494e215c5",
+      "name": "Docs History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `docs`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived docs history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "documentation",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived docs history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*docs*"
+    },
+    {
+      "id": "wayback-docs-host-history-0d78599452",
+      "name": "Docs Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `docs.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "docs.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "docs.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/docs.{domain}/*"
+    },
+    {
+      "id": "wayback-download-history-585a2cecef",
+      "name": "Download History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `download`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived download history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "files",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived download history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*download*"
+    },
+    {
+      "id": "wayback-edge-host-history-94f45e8226",
+      "name": "Edge Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `edge.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "edge.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "edge.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/edge.{domain}/*"
+    },
+    {
+      "id": "wayback-git-host-history-f17841af07",
+      "name": "Git Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `git.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "git.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "git.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/git.{domain}/*"
+    },
+    {
+      "id": "wayback-graphql-path-history-578282872a",
+      "name": "GraphQL Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `graphql`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived graphql history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived graphql history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*graphql*"
+    },
+    {
+      "id": "wayback-health-endpoint-history-207cf0ab2a",
+      "name": "Health Endpoint History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `health`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived health history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "monitoring",
+        "wayback"
+      ],
+      "example": "example.com archived health history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*health*"
+    },
+    {
+      "id": "wayback-help-host-history-de5116a83c",
+      "name": "Help Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `help.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "help.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "help.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/help.{domain}/*"
+    },
+    {
+      "id": "wayback-id-host-history-bc0cea6c91",
+      "name": "Id Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `id.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "id.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "id.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/id.{domain}/*"
+    },
+    {
+      "id": "wayback-integrations-history-d6ab4f04b4",
+      "name": "Integrations History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `integrations`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived integrations history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "documentation",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived integrations history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*integrations*"
+    },
+    {
+      "id": "wayback-login-host-history-15f9235112",
+      "name": "Login Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `login.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "login.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "login.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/login.{domain}/*"
+    },
+    {
+      "id": "wayback-login-path-history-5c6d1b8841",
+      "name": "Login Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `login`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived login history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "authentication",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived login history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*login*"
+    },
+    {
+      "id": "wayback-media-host-history-078293be95",
+      "name": "Media Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `media.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "media.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "media.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/media.{domain}/*"
+    },
+    {
+      "id": "wayback-mobile-host-history-823c57442d",
+      "name": "Mobile Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `mobile.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "mobile.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "mobile.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/mobile.{domain}/*"
+    },
+    {
+      "id": "wayback-openapi-history-de4791eab5",
+      "name": "OpenAPI History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `openapi`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived openapi history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived openapi history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*openapi*"
+    },
+    {
+      "id": "wayback-openapi-json-history-c0c1c8106f",
+      "name": "OpenAPI JSON History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `openapi.json`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived openapi.json history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived openapi.json history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*openapi.json*"
+    },
+    {
+      "id": "wayback-partner-path-history-3e62aed451",
+      "name": "Partner Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `partner`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived partner history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "dashboards",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived partner history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*partner*"
+    },
+    {
+      "id": "wayback-partners-host-history-e61f440ac4",
+      "name": "Partners Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `partners.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "partners.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "partners.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/partners.{domain}/*"
+    },
+    {
+      "id": "wayback-portal-history-60d9aaac3d",
+      "name": "Portal History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `portal`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived portal history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "dashboards",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived portal history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*portal*"
+    },
+    {
+      "id": "wayback-portal-host-history-b342be29c0",
+      "name": "Portal Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `portal.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "portal.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "portal.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/portal.{domain}/*"
+    },
+    {
+      "id": "wayback-preview-host-history-1f344c02a9",
+      "name": "Preview Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `preview.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "preview.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "preview.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/preview.{domain}/*"
+    },
+    {
+      "id": "wayback-redoc-history-e87d1f7bf6",
+      "name": "Redoc History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `redoc`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived redoc history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived redoc history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*redoc*"
+    },
+    {
+      "id": "wayback-release-notes-history-71d72d4d8c",
+      "name": "Release Notes History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `release-notes`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived release-notes history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "documentation",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived release-notes history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*release-notes*"
+    },
+    {
+      "id": "wayback-robotstxt-history-35fd97465c",
+      "name": "Robots.txt History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `robots.txt`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived robots.txt history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "content-discovery",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived robots.txt history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*robots.txt*"
+    },
+    {
+      "id": "wayback-sdk-history-c3fe3a201c",
+      "name": "SDK History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `sdk`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived sdk history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "documentation",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived sdk history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*sdk*"
+    },
+    {
+      "id": "wayback-search-host-history-90003072bb",
+      "name": "Search Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `search.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "search.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "search.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/search.{domain}/*"
+    },
+    {
+      "id": "wayback-shop-host-history-5cdd868195",
+      "name": "Shop Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `shop.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "shop.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "shop.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/shop.{domain}/*"
+    },
+    {
+      "id": "wayback-sitemap-history-42d4aff325",
+      "name": "Sitemap History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `sitemap`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived sitemap history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "content-discovery",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived sitemap history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*sitemap*"
+    },
+    {
+      "id": "wayback-stage-host-history-8b12b3925c",
+      "name": "Stage Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `stage.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "stage.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "stage.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/stage.{domain}/*"
+    },
+    {
+      "id": "wayback-static-assets-history-db55c25d8a",
+      "name": "Static Assets History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `static`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived static history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "assets",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived static history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*static*"
+    },
+    {
+      "id": "wayback-static-host-history-a34487f70b",
+      "name": "Static Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `static.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "static.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "static.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/static.{domain}/*"
+    },
+    {
+      "id": "wayback-status-history-053bb9088c",
+      "name": "Status History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `status`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived status history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "monitoring",
+        "wayback"
+      ],
+      "example": "example.com archived status history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*status*"
+    },
+    {
+      "id": "wayback-status-host-history-7bdcf0ac59",
+      "name": "Status Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `status.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "status.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "status.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/status.{domain}/*"
+    },
+    {
+      "id": "wayback-support-host-history-b38d06bb9d",
+      "name": "Support Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `support.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "support.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "support.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/support.{domain}/*"
+    },
+    {
+      "id": "wayback-swagger-history-170b0eda63",
+      "name": "Swagger History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `swagger`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived swagger history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived swagger history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*swagger*"
+    },
+    {
+      "id": "wayback-swagger-json-history-38d25bd879",
+      "name": "Swagger JSON History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `swagger.json`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived swagger.json history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived swagger.json history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*swagger.json*"
+    },
+    {
+      "id": "wayback-swagger-ui-history-8f6e71f54f",
+      "name": "Swagger UI History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `swagger-ui`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived swagger-ui history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived swagger-ui history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*swagger-ui*"
+    },
+    {
+      "id": "wayback-upload-path-history-0639bb4288",
+      "name": "Upload Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `upload`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived upload history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "files",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived upload history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*upload*"
+    },
+    {
+      "id": "wayback-version-endpoint-history-68a19a6d4d",
+      "name": "Version Endpoint History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `version`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived version history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived version history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*version*"
+    },
+    {
+      "id": "wayback-vpn-host-history-29ce950d21",
+      "name": "Vpn Host History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for the `vpn.{domain}` host pattern. This helps identify historical subdomain usage and retired public hosts.",
+      "query_template": "vpn.{domain} archived history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "historical-recon",
+        "subdomains",
+        "wayback"
+      ],
+      "example": "vpn.example.com archived history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/vpn.{domain}/*"
+    },
+    {
+      "id": "wayback-webhook-history-9528869cc5",
+      "name": "Webhook History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `webhook`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived webhook history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "archive",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived webhook history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*webhook*"
+    },
+    {
+      "id": "wayback-wellknown-path-history-20956e4998",
+      "name": "Well-Known Path History",
+      "category": "Wayback",
+      "engine": "Wayback Machine",
+      "description": "Opens archived captures for a target domain whose URL history includes `.well-known`. This helps discover historical routes and public content no longer visible on the live site.",
+      "query_template": "{domain} archived .well-known history",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "archive",
+        "content-discovery",
+        "historical-recon",
+        "wayback"
+      ],
+      "example": "example.com archived .well-known history",
+      "safe_mode": true,
+      "reference": "https://web.archive.org/",
+      "launch_url": "https://web.archive.org/web/*/{domain}/*.well-known*"
+    }
+  ]
+}

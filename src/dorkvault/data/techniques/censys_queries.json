@@ -1,0 +1,1997 @@
+{
+  "category_id": "censys_queries",
+  "category_name": "Censys",
+  "description": "Search queries for reviewing hosts and certificate-related data indexed in Censys.",
+  "display_order": 50,
+  "techniques": [
+    {
+      "id": "censys-admin-banner-company-search-098ed8e7aa",
+      "name": "Admin Banner Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose banner data references `admin`. This helps surface branded or operational systems.",
+      "query_template": "services.banner:\"admin\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "censys",
+        "organization",
+        "recon",
+        "service-banners"
+      ],
+      "example": "services.banner:\"admin\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-admin-banner-domain-search-1310f3ec33",
+      "name": "Admin Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `admin`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"admin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "censys",
+        "hostnames",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"admin\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-admin-http-body-domain-search-fe7af5d8fa",
+      "name": "Admin HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `admin`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"admin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "censys",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"admin\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-admin-http-title-company-search-a2efe00336",
+      "name": "Admin HTTP Title Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose http title data references `admin`. This helps surface branded or operational systems.",
+      "query_template": "services.http.response.html_title:\"admin\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "censys",
+        "organization",
+        "recon",
+        "titles"
+      ],
+      "example": "services.http.response.html_title:\"admin\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-admin-http-title-domain-search-d6ebcb5823",
+      "name": "Admin HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `admin`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"admin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "censys",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"admin\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-api-banner-company-search-99509bff13",
+      "name": "API Banner Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose banner data references `api`. This helps surface branded or operational systems.",
+      "query_template": "services.banner:\"api\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "organization",
+        "recon",
+        "service-banners"
+      ],
+      "example": "services.banner:\"api\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-api-banner-domain-search-789de88360",
+      "name": "API Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `api`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"api\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "hostnames",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"api\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-api-http-body-domain-search-d1ee6263ae",
+      "name": "API HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `api`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"api\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"api\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-api-http-title-company-search-6dcf704a23",
+      "name": "API HTTP Title Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose http title data references `api`. This helps surface branded or operational systems.",
+      "query_template": "services.http.response.html_title:\"api\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "organization",
+        "recon",
+        "titles"
+      ],
+      "example": "services.http.response.html_title:\"api\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-api-http-title-domain-search-96bf875273",
+      "name": "API HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `api`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"api\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"api\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-banner-company-search-9a022c42c8",
+      "name": "Banner Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for `banner` records that reference the target company. This helps find branded public systems and certificate metadata.",
+      "query_template": "services.banner:{company}",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "branding",
+        "censys",
+        "recon",
+        "service-banners"
+      ],
+      "example": "services.banner:Example Corp",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-certificate-common-name-domain-search-d0591ce706",
+      "name": "Certificate Common Name Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys host data for `certificate common name` values related to a target domain. This supports public asset discovery and certificate correlation.",
+      "query_template": "services.tls.certificates.leaf_data.subject.common_name:{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "certificates",
+        "recon",
+        "tls"
+      ],
+      "example": "services.tls.certificates.leaf_data.subject.common_name:example.com",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-certificate-san-domain-search-50cd634b09",
+      "name": "Certificate SAN Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys host data for `certificate san` values related to a target domain. This supports public asset discovery and certificate correlation.",
+      "query_template": "services.tls.certificates.leaf_data.names:{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "certificates",
+        "recon",
+        "subject-alt-name"
+      ],
+      "example": "services.tls.certificates.leaf_data.names:example.com",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-certificate-subject-company-search-b467dce7cc",
+      "name": "Certificate Subject Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for `certificate subject` records that reference the target company. This helps find branded public systems and certificate metadata.",
+      "query_template": "services.tls.certificates.leaf_data.subject.organization:{company}",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "certificates",
+        "organization",
+        "recon"
+      ],
+      "example": "services.tls.certificates.leaf_data.subject.organization:Example Corp",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-dashboard-banner-domain-search-ede8503773",
+      "name": "Dashboard Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `dashboard`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"dashboard\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "dashboards",
+        "hostnames",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"dashboard\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-dashboard-http-body-domain-search-bca4bbbddc",
+      "name": "Dashboard HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `dashboard`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"dashboard\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "dashboards",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"dashboard\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-dashboard-http-title-domain-search-2c973d0d1e",
+      "name": "Dashboard HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `dashboard`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"dashboard\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "dashboards",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"dashboard\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-developer-portal-banner-domain-search-6e7e301003",
+      "name": "Developer Portal Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `developer portal`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"developer portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "documentation",
+        "hostnames",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"developer portal\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-developer-portal-http-body-domain-search-e53721c080",
+      "name": "Developer Portal HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `developer portal`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"developer portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "documentation",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"developer portal\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-developer-portal-http-title-domain-search-f03c426460",
+      "name": "Developer Portal HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `developer portal`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"developer portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "documentation",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"developer portal\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-documentation-banner-company-search-2cc5dd7478",
+      "name": "Documentation Banner Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose banner data references `docs`. This helps surface branded or operational systems.",
+      "query_template": "services.banner:\"docs\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "documentation",
+        "organization",
+        "recon",
+        "service-banners"
+      ],
+      "example": "services.banner:\"docs\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-documentation-http-title-company-search-349a39b26a",
+      "name": "Documentation HTTP Title Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose http title data references `docs`. This helps surface branded or operational systems.",
+      "query_template": "services.http.response.html_title:\"docs\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "documentation",
+        "organization",
+        "recon",
+        "titles"
+      ],
+      "example": "services.http.response.html_title:\"docs\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-grafana-banner-company-search-6dd815158b",
+      "name": "Grafana Banner Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose banner data references `grafana`. This helps surface branded or operational systems.",
+      "query_template": "services.banner:\"grafana\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "monitoring",
+        "organization",
+        "recon",
+        "service-banners"
+      ],
+      "example": "services.banner:\"grafana\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-grafana-banner-domain-search-e1b85aeab8",
+      "name": "Grafana Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `grafana`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"grafana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "hostnames",
+        "monitoring",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"grafana\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-grafana-http-body-domain-search-6efa09742c",
+      "name": "Grafana HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `grafana`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"grafana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "html-content",
+        "http",
+        "monitoring",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"grafana\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-grafana-http-title-company-search-649813d8f7",
+      "name": "Grafana HTTP Title Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose http title data references `grafana`. This helps surface branded or operational systems.",
+      "query_template": "services.http.response.html_title:\"grafana\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "monitoring",
+        "organization",
+        "recon",
+        "titles"
+      ],
+      "example": "services.http.response.html_title:\"grafana\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-grafana-http-title-domain-search-834e572bd1",
+      "name": "Grafana HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `grafana`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"grafana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "http",
+        "monitoring",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"grafana\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-http-html-body-domain-search-b343435d8e",
+      "name": "HTTP HTML Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys host data for `http html body` values related to a target domain. This supports public asset discovery and certificate correlation.",
+      "query_template": "services.http.response.body:{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "services.http.response.body:example.com",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-http-title-company-search-3172a71e10",
+      "name": "HTTP Title Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for `http title` records that reference the target company. This helps find branded public systems and certificate metadata.",
+      "query_template": "services.http.response.html_title:{company}",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "branding",
+        "censys",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "services.http.response.html_title:Example Corp",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-issuer-organization-company-search-dc2beae95d",
+      "name": "Issuer Organization Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for `issuer organization` records that reference the target company. This helps find branded public systems and certificate metadata.",
+      "query_template": "services.tls.certificates.leaf_data.issuer.organization:{company}",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "certificates",
+        "issuer",
+        "recon"
+      ],
+      "example": "services.tls.certificates.leaf_data.issuer.organization:Example Corp",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-jenkins-banner-domain-search-bcd4355727",
+      "name": "Jenkins Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `jenkins`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"jenkins\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "ci-cd",
+        "hostnames",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"jenkins\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-jenkins-http-body-domain-search-2bc9e71c11",
+      "name": "Jenkins HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `jenkins`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"jenkins\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "ci-cd",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"jenkins\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-jenkins-http-title-domain-search-99b2e96b83",
+      "name": "Jenkins HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `jenkins`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"jenkins\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "ci-cd",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"jenkins\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-kibana-banner-domain-search-f88b61ef7a",
+      "name": "Kibana Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `kibana`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"kibana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "hostnames",
+        "monitoring",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"kibana\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-kibana-http-body-domain-search-88d718b5ef",
+      "name": "Kibana HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `kibana`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"kibana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "html-content",
+        "http",
+        "monitoring",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"kibana\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-kibana-http-title-domain-search-705f9f5769",
+      "name": "Kibana HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `kibana`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"kibana\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "http",
+        "monitoring",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"kibana\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-login-banner-domain-search-80dc02d009",
+      "name": "Login Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `login`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "authentication",
+        "censys",
+        "hostnames",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"login\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-login-http-body-domain-search-d1c7a64b8b",
+      "name": "Login HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `login`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "authentication",
+        "censys",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"login\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-login-http-title-domain-search-be581d3719",
+      "name": "Login HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `login`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "authentication",
+        "censys",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"login\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-monitoring-banner-domain-search-cbf8a399b2",
+      "name": "Monitoring Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `monitoring`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"monitoring\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "hostnames",
+        "monitoring",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"monitoring\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-monitoring-http-body-domain-search-9819601984",
+      "name": "Monitoring HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `monitoring`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"monitoring\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "html-content",
+        "http",
+        "monitoring",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"monitoring\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-monitoring-http-title-domain-search-09ae2ce00e",
+      "name": "Monitoring HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `monitoring`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"monitoring\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "http",
+        "monitoring",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"monitoring\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-observed-domain-company-search-cab91535bb",
+      "name": "Observed Domain Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for `observed domain` records that reference the target company. This helps find branded public systems and certificate metadata.",
+      "query_template": "dns.reverse_dns.names:{company}",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "dns",
+        "recon",
+        "reverse-dns"
+      ],
+      "example": "dns.reverse_dns.names:Example Corp",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-observed-hostname-domain-search-ac08246722",
+      "name": "Observed Hostname Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys host data for `observed hostname` values related to a target domain. This supports public asset discovery and certificate correlation.",
+      "query_template": "dns.names:{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "dns",
+        "hostnames",
+        "recon"
+      ],
+      "example": "dns.names:example.com",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-openapi-banner-domain-search-fd14f8836b",
+      "name": "OpenAPI Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `openapi`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"openapi\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "hostnames",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"openapi\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-openapi-http-body-domain-search-2876fd32e4",
+      "name": "OpenAPI HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `openapi`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"openapi\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"openapi\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-openapi-http-title-domain-search-96f90546be",
+      "name": "OpenAPI HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `openapi`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"openapi\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"openapi\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-portal-banner-company-search-75c804ba53",
+      "name": "Portal Banner Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose banner data references `portal`. This helps surface branded or operational systems.",
+      "query_template": "services.banner:\"portal\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "dashboards",
+        "organization",
+        "recon",
+        "service-banners"
+      ],
+      "example": "services.banner:\"portal\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-portal-banner-domain-search-3bd279805f",
+      "name": "Portal Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `portal`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "dashboards",
+        "hostnames",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"portal\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-portal-http-body-domain-search-2f7eef3c48",
+      "name": "Portal HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `portal`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "dashboards",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"portal\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-portal-http-title-company-search-cc775a5e50",
+      "name": "Portal HTTP Title Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose http title data references `portal`. This helps surface branded or operational systems.",
+      "query_template": "services.http.response.html_title:\"portal\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "dashboards",
+        "organization",
+        "recon",
+        "titles"
+      ],
+      "example": "services.http.response.html_title:\"portal\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-portal-http-title-domain-search-ca2118ed8d",
+      "name": "Portal HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `portal`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "dashboards",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"portal\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-prometheus-banner-domain-search-4f21ca79a4",
+      "name": "Prometheus Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `prometheus`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"prometheus\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "hostnames",
+        "monitoring",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"prometheus\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-prometheus-http-body-domain-search-f1d5513aa2",
+      "name": "Prometheus HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `prometheus`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"prometheus\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "html-content",
+        "http",
+        "monitoring",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"prometheus\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-prometheus-http-title-domain-search-0fbd500235",
+      "name": "Prometheus HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `prometheus`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"prometheus\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "http",
+        "monitoring",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"prometheus\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-redoc-banner-domain-search-6af26157ef",
+      "name": "Redoc Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `redoc`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"redoc\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "hostnames",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"redoc\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-redoc-http-body-domain-search-1097296dba",
+      "name": "Redoc HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `redoc`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"redoc\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"redoc\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-redoc-http-title-domain-search-aec66e5a0f",
+      "name": "Redoc HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `redoc`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"redoc\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"redoc\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-service-banner-domain-search-4bef91f7a9",
+      "name": "Service Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys host data for `service banner` values related to a target domain. This supports public asset discovery and certificate correlation.",
+      "query_template": "services.banner:{domain}",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "fingerprinting",
+        "recon",
+        "service-banners"
+      ],
+      "example": "services.banner:example.com",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-status-banner-company-search-c9c6315459",
+      "name": "Status Banner Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose banner data references `status`. This helps surface branded or operational systems.",
+      "query_template": "services.banner:\"status\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "monitoring",
+        "organization",
+        "recon",
+        "service-banners"
+      ],
+      "example": "services.banner:\"status\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-status-banner-domain-search-a6b5b41c24",
+      "name": "Status Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `status`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"status\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "hostnames",
+        "monitoring",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"status\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-status-http-body-domain-search-2edff49147",
+      "name": "Status HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `status`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"status\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "html-content",
+        "http",
+        "monitoring",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"status\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-status-http-title-company-search-07e4921d63",
+      "name": "Status HTTP Title Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose http title data references `status`. This helps surface branded or operational systems.",
+      "query_template": "services.http.response.html_title:\"status\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "monitoring",
+        "organization",
+        "recon",
+        "titles"
+      ],
+      "example": "services.http.response.html_title:\"status\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-status-http-title-domain-search-57d6ca6066",
+      "name": "Status HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `status`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"status\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "http",
+        "monitoring",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"status\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-support-banner-company-search-7f322fac09",
+      "name": "Support Banner Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose banner data references `support`. This helps surface branded or operational systems.",
+      "query_template": "services.banner:\"support\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "organization",
+        "recon",
+        "service-banners",
+        "support"
+      ],
+      "example": "services.banner:\"support\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-support-banner-domain-search-b9941e6497",
+      "name": "Support Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `support`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"support\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "hostnames",
+        "recon",
+        "service-banners",
+        "support"
+      ],
+      "example": "dns.names:example.com and services.banner:\"support\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-support-http-body-domain-search-dc5d4bcdac",
+      "name": "Support HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `support`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"support\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "html-content",
+        "http",
+        "recon",
+        "support"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"support\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-support-http-title-company-search-c443fd5cab",
+      "name": "Support HTTP Title Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose http title data references `support`. This helps surface branded or operational systems.",
+      "query_template": "services.http.response.html_title:\"support\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "censys",
+        "organization",
+        "recon",
+        "support",
+        "titles"
+      ],
+      "example": "services.http.response.html_title:\"support\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-support-http-title-domain-search-d2509225e2",
+      "name": "Support HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `support`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"support\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "censys",
+        "http",
+        "recon",
+        "support",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"support\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-swagger-banner-company-search-29ca90d28d",
+      "name": "Swagger Banner Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose banner data references `swagger`. This helps surface branded or operational systems.",
+      "query_template": "services.banner:\"swagger\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "organization",
+        "recon",
+        "service-banners"
+      ],
+      "example": "services.banner:\"swagger\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-swagger-banner-domain-search-41e85c4579",
+      "name": "Swagger Banner Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose banner data references `swagger`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.banner:\"swagger\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "hostnames",
+        "recon",
+        "service-banners"
+      ],
+      "example": "dns.names:example.com and services.banner:\"swagger\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-swagger-http-body-domain-search-1e202c63c6",
+      "name": "Swagger HTTP Body Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http body data references `swagger`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.body:\"swagger\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "html-content",
+        "http",
+        "recon"
+      ],
+      "example": "dns.names:example.com and services.http.response.body:\"swagger\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-swagger-http-title-company-search-9af47c3eae",
+      "name": "Swagger HTTP Title Company Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for organization-linked services whose http title data references `swagger`. This helps surface branded or operational systems.",
+      "query_template": "services.http.response.html_title:\"swagger\" and services.tls.certificates.leaf_data.subject.organization:\"{company}\"",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "organization",
+        "recon",
+        "titles"
+      ],
+      "example": "services.http.response.html_title:\"swagger\" and services.tls.certificates.leaf_data.subject.organization:\"Example Corp\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    },
+    {
+      "id": "censys-swagger-http-title-domain-search-60156b59ad",
+      "name": "Swagger HTTP Title Domain Search",
+      "category": "Censys",
+      "engine": "Censys",
+      "description": "Searches Censys for target-domain hosts whose http title data references `swagger`. This supports public surface discovery and service review.",
+      "query_template": "dns.names:{domain} and services.http.response.html_title:\"swagger\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "censys",
+        "http",
+        "recon",
+        "titles"
+      ],
+      "example": "dns.names:example.com and services.http.response.html_title:\"swagger\"",
+      "safe_mode": true,
+      "reference": "https://search.censys.io/help",
+      "launch_url": "https://search.censys.io/search?resource=hosts&q={query}"
+    }
+  ]
+}

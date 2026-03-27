@@ -1,0 +1,3028 @@
+{
+  "category_id": "cms_queries",
+  "category_name": "CMS Queries",
+  "description": "Search queries for discovering public WordPress, Joomla, Drupal, Magento, Laravel, Django, Ghost, and Strapi surfaces on authorized targets.",
+  "display_order": 70,
+  "techniques": [
+    {
+      "id": "cms-django-debug-search-f3860a5313",
+      "name": "Django   Debug   Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `__debug__` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"__debug__\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"__debug__\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-accounts-login-search-60844d7ccf",
+      "name": "Django Accounts Login Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `accounts/login` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"accounts/login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"accounts/login\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-admin-login-search-2027b4fe7a",
+      "name": "Django Admin Login Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `admin/login` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"admin/login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"admin/login\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-admin-search-23c40f028e",
+      "name": "Django Admin Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches a target domain for admin-facing pages and dashboards associated with Django. This is useful for spotting public CMS components, admin surfaces, and implementation clues.",
+      "query_template": "site:{domain} inurl:\"/admin/\" intitle:\"Django site admin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/admin/\" intitle:\"Django site admin\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-django-search-7a7c2baa37",
+      "name": "Django Django Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `django` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"django\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"django\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-drf-yasg-search-64ed896ffb",
+      "name": "Django Drf Yasg Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `drf-yasg` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"drf-yasg\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"drf-yasg\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-intextdjango-administration-search-b33a313316",
+      "name": "Django Intext:\"Django Administration\" Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `intext:\"Django administration\"` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"intext:\"Django administration\"\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"intext:\"Django administration\"\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-openapi-django-search-0322d1cafa",
+      "name": "Django Openapi Django Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `openapi django` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"openapi django\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"openapi django\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-rest-framework-search-c1f5319455",
+      "name": "Django Rest Framework Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `rest framework` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"rest framework\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"rest framework\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-robotstxt-django-search-4ac0cc1341",
+      "name": "Django Robots.Txt Django Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `robots.txt django` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"robots.txt django\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"robots.txt django\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-sitemapxml-django-search-2d6bb9f9d1",
+      "name": "Django Sitemap.Xml Django Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `sitemap.xml django` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"sitemap.xml django\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"sitemap.xml django\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-static-admin-search-b100c0e5e4",
+      "name": "Django Static Admin Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `static/admin` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"static/admin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"static/admin\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-swagger-django-search-02b5a3c7f0",
+      "name": "Django Swagger Django Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `swagger django` surface associated with Django. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"swagger django\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"swagger django\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-django-version-disclosure-search-ae7b9a94b9",
+      "name": "Django Version Disclosure Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches a target domain for Django administrative and versioning clues associated with Django. This is useful for spotting public CMS components, admin surfaces, and implementation clues.",
+      "query_template": "site:{domain} intext:\"Django Version\" intitle:\"Django\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "django",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intext:\"Django Version\" intitle:\"Django\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-changelogtxt-search-e5f4b565df",
+      "name": "Drupal Changelog.Txt Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `CHANGELOG.txt` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"CHANGELOG.txt\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"CHANGELOG.txt\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-core-assets-search-eabd0e4df1",
+      "name": "Drupal Core Assets Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `core/assets` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"core/assets\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"core/assets\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-core-modules-search-934d09ae49",
+      "name": "Drupal Core Modules Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `core/modules` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"core/modules\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"core/modules\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-drupal-search-20c3dbae5b",
+      "name": "Drupal Drupal Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `drupal` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"drupal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"drupal\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-indexphpquser-login-search-26d73c91b0",
+      "name": "Drupal Index.Php?Q=User Login Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `index.php?q=user/login` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"index.php?q=user/login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"index.php?q=user/login\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-intextpowered-by-drupal-search-06b608d325",
+      "name": "Drupal Intext:\"Powered By Drupal\" Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `intext:\"powered by drupal\"` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"intext:\"powered by drupal\"\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"intext:\"powered by drupal\"\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-robotstxt-drupal-search-f898cdf316",
+      "name": "Drupal Robots.Txt Drupal Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `robots.txt drupal` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"robots.txt drupal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"robots.txt drupal\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-sites-all-modules-search-c574b40db0",
+      "name": "Drupal Sites All Modules Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `sites/all/modules` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"sites/all/modules\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"sites/all/modules\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-sites-all-themes-search-5f498a0951",
+      "name": "Drupal Sites All Themes Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `sites/all/themes` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"sites/all/themes\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"sites/all/themes\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-sites-default-files-js-search-8e2b424132",
+      "name": "Drupal Sites Default Files Js Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `sites/default/files/js` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"sites/default/files/js\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"sites/default/files/js\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-sites-default-files-search-543784cfe3",
+      "name": "Drupal Sites Default Files Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `sites/default/files` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"sites/default/files\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"sites/default/files\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-sites-default-settingsphp-search-7e52b9f866",
+      "name": "Drupal Sites Default Settings.Php Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `sites/default/settings.php` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"sites/default/settings.php\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"sites/default/settings.php\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-surface-search-adc8d93951",
+      "name": "Drupal Surface Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches a target domain for login and authentication surfaces associated with Drupal. This is useful for spotting public CMS components, admin surfaces, and implementation clues.",
+      "query_template": "site:{domain} inurl:\"/user/login\" intitle:\"Drupal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "authentication",
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/user/login\" intitle:\"Drupal\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-user-login-search-8d7638c1cf",
+      "name": "Drupal User Login Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `user/login` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"user/login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"user/login\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-drupal-user-register-search-31a3439662",
+      "name": "Drupal User Register Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `user/register` surface associated with Drupal. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"user/register\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "drupal",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"user/register\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-ghost-content-images-search-b8683fa5fa",
+      "name": "Ghost Content Images Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `content/images` surface associated with Ghost. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"content/images\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "ghost",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"content/images\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-ghost-ghost-signin-search-22b6e8b886",
+      "name": "Ghost Ghost # Signin Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `ghost/#/signin` surface associated with Ghost. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"ghost/#/signin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "ghost",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"ghost/#/signin\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-ghost-ghost-api-search-3852fb2d46",
+      "name": "Ghost Ghost Api Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `ghost/api` surface associated with Ghost. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"ghost/api\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "ghost",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"ghost/api\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-ghost-ghost-assets-search-60fc4d2344",
+      "name": "Ghost Ghost Assets Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `ghost/assets` surface associated with Ghost. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"ghost/assets\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "ghost",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"ghost/assets\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-ghost-ghost-members-search-8ea70796dc",
+      "name": "Ghost Ghost Members Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `ghost/members` surface associated with Ghost. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"ghost/members\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "ghost",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"ghost/members\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-ghost-ghost-search-a7e747a626",
+      "name": "Ghost Ghost Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `ghost` surface associated with Ghost. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"ghost\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "ghost",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"ghost\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-ghost-robotstxt-ghost-search-81819150c0",
+      "name": "Ghost Robots.Txt Ghost Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `robots.txt ghost` surface associated with Ghost. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"robots.txt ghost\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "ghost",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"robots.txt ghost\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-admin-search-4d821f2dd2",
+      "name": "Joomla Admin Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches a target domain for admin-facing pages and dashboards associated with Joomla. This is useful for spotting public CMS components, admin surfaces, and implementation clues.",
+      "query_template": "site:{domain} inurl:\"/administrator/index.php\" intitle:\"Joomla\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/administrator/index.php\" intitle:\"Joomla\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-administrator-indexphp-search-0a1a8905bf",
+      "name": "Joomla Administrator Index.Php Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `administrator/index.php` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"administrator/index.php\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"administrator/index.php\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-administrator-search-a656e4b7ba",
+      "name": "Joomla Administrator Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `administrator` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"administrator\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"administrator\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-api-indexphp-search-ab0b21e09d",
+      "name": "Joomla Api Index.Php Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `api/index.php` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"api/index.php\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"api/index.php\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-com-ajax-search-6f43c2c467",
+      "name": "Joomla Com Ajax Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `com_ajax` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"com_ajax\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"com_ajax\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-com-contact-search-7a34213509",
+      "name": "Joomla Com Contact Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `com_contact` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"com_contact\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"com_contact\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-com-content-search-2c216a35e8",
+      "name": "Joomla Com Content Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `com_content` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"com_content\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"com_content\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-com-search-search-3bb227f910",
+      "name": "Joomla Com Search Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `com_search` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"com_search\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"com_search\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-component-users-search-43a029e84d",
+      "name": "Joomla Component Users Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `component/users` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"component/users\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"component/users\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-indexphpoptioncom-search-e6928cd3d2",
+      "name": "Joomla Index.Php?Option=Com  Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `index.php?option=com_` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"index.php?option=com_\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"index.php?option=com_\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-joomlaxml-search-b04b01f701",
+      "name": "Joomla Joomla.Xml Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `joomla.xml` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"joomla.xml\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"joomla.xml\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-language-en-gb-search-06bfd3e2e3",
+      "name": "Joomla Language En Gb Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `language/en-GB` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"language/en-GB\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"language/en-GB\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-media-system-search-0c8cc490d0",
+      "name": "Joomla Media System Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `media/system` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"media/system\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"media/system\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-robotstxt-joomla-search-2506a56140",
+      "name": "Joomla Robots.Txt Joomla Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `robots.txt joomla` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"robots.txt joomla\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"robots.txt joomla\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-surface-search-171f9f00c9",
+      "name": "Joomla Surface Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches a target domain for publicly indexed recon-relevant pages associated with Joomla. This is useful for spotting public CMS components, admin surfaces, and implementation clues.",
+      "query_template": "site:{domain} inurl:\"/index.php?option=com_users\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/index.php?option=com_users\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-templates-cassiopeia-search-42aee66dd8",
+      "name": "Joomla Templates Cassiopeia Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `templates/cassiopeia` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"templates/cassiopeia\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"templates/cassiopeia\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-joomla-templates-protostar-search-a4fe3fae92",
+      "name": "Joomla Templates Protostar Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `templates/protostar` surface associated with Joomla. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"templates/protostar\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "joomla",
+        "recon"
+      ],
+      "example": "site:example.com \"templates/protostar\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-api-documentation-laravel-search-3c816b4ce7",
+      "name": "Laravel Api Documentation Laravel Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `api/documentation laravel` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"api/documentation laravel\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"api/documentation laravel\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-horizon-search-95297c16a2",
+      "name": "Laravel Horizon Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `horizon` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"horizon\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"horizon\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-laravel-search-c887e6f650",
+      "name": "Laravel Laravel Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `laravel` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"laravel\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"laravel\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-livewire-search-e71c6cd173",
+      "name": "Laravel Livewire Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `livewire` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"livewire\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"livewire\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-mix-manifestjson-search-fd8eafaf9a",
+      "name": "Laravel Mix Manifest.Json Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `mix-manifest.json` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"mix-manifest.json\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"mix-manifest.json\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-nova-search-9390499e9b",
+      "name": "Laravel Nova Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `nova` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"nova\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"nova\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-routes-apiphp-laravel-search-a3847bfcc0",
+      "name": "Laravel Routes Api.Php Laravel Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `routes/api.php laravel` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"routes/api.php laravel\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"routes/api.php laravel\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-routes-webphp-laravel-search-4e4a41848c",
+      "name": "Laravel Routes Web.Php Laravel Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `routes/web.php laravel` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"routes/web.php laravel\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"routes/web.php laravel\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-sanctum-csrf-cookie-search-1d96d58e4a",
+      "name": "Laravel Sanctum Csrf Cookie Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `sanctum/csrf-cookie` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"sanctum/csrf-cookie\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"sanctum/csrf-cookie\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-storage-framework-search-17c5cbab65",
+      "name": "Laravel Storage Framework Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `storage/framework` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"storage/framework\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"storage/framework\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-telescope-search-d2e3d8b5b4",
+      "name": "Laravel Telescope Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `telescope` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"telescope\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"telescope\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-laravel-vendor-laravel-search-d63f4e5f76",
+      "name": "Laravel Vendor Laravel Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `vendor/laravel` surface associated with Laravel. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"vendor/laravel\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "laravel",
+        "recon"
+      ],
+      "example": "site:example.com \"vendor/laravel\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-admin-search-2cbf92932a",
+      "name": "Magento Admin Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `admin` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"admin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"admin\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-catalogsearch-search-bd8f171860",
+      "name": "Magento Catalogsearch Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `catalogsearch` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"catalogsearch\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"catalogsearch\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-customer-account-login-search-bfaf7fbd39",
+      "name": "Magento Customer Account Login Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `customer/account/login` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"customer/account/login\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"customer/account/login\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-downloader-search-29f61aabbd",
+      "name": "Magento Downloader Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `downloader` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"downloader\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"downloader\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-graphql-magento-search-75167b244b",
+      "name": "Magento Graphql Magento Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `graphql magento` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"graphql magento\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"graphql magento\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-intextpowered-by-magento-search-a909779807",
+      "name": "Magento Intext:\"Powered By Magento\" Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `intext:\"powered by magento\"` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"intext:\"powered by magento\"\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"intext:\"powered by magento\"\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-magento-search-335abaf7a7",
+      "name": "Magento Magento Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `magento` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"magento\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"magento\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-pub-static-search-b6988df86f",
+      "name": "Magento Pub Static Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `pub/static` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"pub/static\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"pub/static\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-release-notes-search-ade42407fd",
+      "name": "Magento Release Notes Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `release-notes` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"release-notes\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"release-notes\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-rest-default-v1-search-f30422045f",
+      "name": "Magento Rest Default V1 Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `rest/default/V1` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"rest/default/V1\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"rest/default/V1\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-robotstxt-magento-search-7b73b9c1b8",
+      "name": "Magento Robots.Txt Magento Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `robots.txt magento` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"robots.txt magento\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"robots.txt magento\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-static-frontend-search-0be532898f",
+      "name": "Magento Static Frontend Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `static/frontend` surface associated with Magento. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"static/frontend\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com \"static/frontend\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-magento-surface-search-991e633925",
+      "name": "Magento Surface Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches a target domain for admin-facing pages and dashboards associated with Magento. This is useful for spotting public CMS components, admin surfaces, and implementation clues.",
+      "query_template": "site:{domain} inurl:\"/index.php/admin/\" intitle:\"Magento\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "admin-surface",
+        "cms",
+        "google",
+        "magento",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/index.php/admin/\" intitle:\"Magento\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-strapi-admin-init-search-1616e5a065",
+      "name": "Strapi Admin Init Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `admin/init` surface associated with Strapi. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"admin/init\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "strapi"
+      ],
+      "example": "site:example.com \"admin/init\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-strapi-content-manager-search-4c1d99a6f4",
+      "name": "Strapi Content Manager Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `content-manager` surface associated with Strapi. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"content-manager\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "strapi"
+      ],
+      "example": "site:example.com \"content-manager\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-strapi-content-type-builder-search-8521c001e6",
+      "name": "Strapi Content Type Builder Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `content-type-builder` surface associated with Strapi. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"content-type-builder\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "strapi"
+      ],
+      "example": "site:example.com \"content-type-builder\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-strapi-documentation-strapi-search-d850848efd",
+      "name": "Strapi Documentation Strapi Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `documentation strapi` surface associated with Strapi. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"documentation strapi\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "strapi"
+      ],
+      "example": "site:example.com \"documentation strapi\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-strapi-graphql-strapi-search-639c4ce8f7",
+      "name": "Strapi Graphql Strapi Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `graphql strapi` surface associated with Strapi. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"graphql strapi\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "strapi"
+      ],
+      "example": "site:example.com \"graphql strapi\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-strapi-openapi-strapi-search-aeff6d5c0d",
+      "name": "Strapi Openapi Strapi Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `openapi strapi` surface associated with Strapi. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"openapi strapi\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "strapi"
+      ],
+      "example": "site:example.com \"openapi strapi\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-strapi-strapi-search-94a182287a",
+      "name": "Strapi Strapi Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `strapi` surface associated with Strapi. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"strapi\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "strapi"
+      ],
+      "example": "site:example.com \"strapi\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-strapi-upload-files-search-49d5631829",
+      "name": "Strapi Upload Files Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `upload/files` surface associated with Strapi. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"upload/files\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "strapi"
+      ],
+      "example": "site:example.com \"upload/files\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-author-sitemapxml-search-17c36e1588",
+      "name": "WordPress Author Sitemap.Xml Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `author-sitemap.xml` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"author-sitemap.xml\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"author-sitemap.xml\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-feed-search-39aff828ff",
+      "name": "WordPress Feed Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `feed` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"feed\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"feed\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-includes-search-ac8279c701",
+      "name": "WordPress Includes Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches a target domain for WordPress assets and public endpoints associated with WordPress. This is useful for spotting public CMS components, admin surfaces, and implementation clues.",
+      "query_template": "site:{domain} inurl:\"/wp-includes/\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com inurl:\"/wp-includes/\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-intextpowered-by-wordpress-search-313bcfb10f",
+      "name": "WordPress Intext:\"Powered By Wordpress\" Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `intext:\"powered by wordpress\"` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"intext:\"powered by wordpress\"\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"intext:\"powered by wordpress\"\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-licensetxt-search-4f351d4ef4",
+      "name": "WordPress License.Txt Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `license.txt` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"license.txt\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"license.txt\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-readmehtml-search-b1306a2bd9",
+      "name": "WordPress Readme.Html Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `readme.html` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"readme.html\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"readme.html\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-robotstxt-wordpress-search-75c67da0af",
+      "name": "WordPress Robots.Txt Wordpress Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `robots.txt wordpress` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"robots.txt wordpress\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"robots.txt wordpress\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-sitemap-indexxml-search-114c0184d0",
+      "name": "WordPress Sitemap Index.Xml Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `sitemap_index.xml` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"sitemap_index.xml\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"sitemap_index.xml\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-surface-search-edc9c6f990",
+      "name": "WordPress Surface Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches a target domain for WordPress assets and public endpoints associated with WordPress. This is useful for spotting public CMS components, admin surfaces, and implementation clues.",
+      "query_template": "site:{domain} inurl:\"/?p=\" intitle:\"WordPress\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com inurl:\"/?p=\" intitle:\"WordPress\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-uploads-search-a0ae99a2db",
+      "name": "WordPress Uploads Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches a target domain for WordPress assets and public endpoints associated with WordPress. This is useful for spotting public CMS components, admin surfaces, and implementation clues.",
+      "query_template": "site:{domain} inurl:\"/wp-content/uploads/\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com inurl:\"/wp-content/uploads/\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-admin-admin-ajaxphp-search-1363135237",
+      "name": "WordPress Wp Admin Admin Ajax.Php Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-admin/admin-ajax.php` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-admin/admin-ajax.php\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-admin/admin-ajax.php\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-admin-search-d6c1100dc9",
+      "name": "WordPress Wp Admin Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-admin` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-admin\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-admin\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-content-cache-search-319af47047",
+      "name": "WordPress Wp Content Cache Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-content/cache` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-content/cache\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-content/cache\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-content-plugins-search-fcfb75305e",
+      "name": "WordPress Wp Content Plugins Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-content/plugins` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-content/plugins\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-content/plugins\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-content-search-3b01ae5d32",
+      "name": "WordPress Wp Content Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-content` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-content\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-content\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-content-themes-search-4b99c7e524",
+      "name": "WordPress Wp Content Themes Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-content/themes` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-content/themes\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-content/themes\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-content-uploads-search-61237356ca",
+      "name": "WordPress Wp Content Uploads Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-content/uploads` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-content/uploads\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-content/uploads\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-cronphp-search-735636aadd",
+      "name": "WordPress Wp Cron.Php Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-cron.php` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-cron.php\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-cron.php\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-includes-search-5f8c6e36c4",
+      "name": "WordPress Wp Includes Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-includes` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-includes\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-includes\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-json-oembed-search-27ee744fba",
+      "name": "WordPress Wp Json Oembed Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-json/oembed` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-json/oembed\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-json/oembed\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-json-search-6ba4469769",
+      "name": "WordPress Wp Json Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-json` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-json\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-json\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-json-wp-v2-categories-13ec436766",
+      "name": "WordPress Wp Json Wp V2 Categories Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-json/wp/v2/categories` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-json/wp/v2/categories\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-json/wp/v2/categories\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-json-wp-v2-pages-7cc554541a",
+      "name": "WordPress Wp Json Wp V2 Pages Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-json/wp/v2/pages` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-json/wp/v2/pages\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-json/wp/v2/pages\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-json-wp-v2-posts-7860b265f1",
+      "name": "WordPress Wp Json Wp V2 Posts Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-json/wp/v2/posts` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-json/wp/v2/posts\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-json/wp/v2/posts\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-json-wp-v2-tags-ed6adb67e2",
+      "name": "WordPress Wp Json Wp V2 Tags Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-json/wp/v2/tags` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-json/wp/v2/tags\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-json/wp/v2/tags\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-json-wp-v2-types-a2ac56264e",
+      "name": "WordPress Wp Json Wp V2 Types Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-json/wp/v2/types` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-json/wp/v2/types\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-json/wp/v2/types\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-loginphp-search-b57788bc7f",
+      "name": "WordPress Wp Login.Php Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-login.php` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-login.php\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-login.php\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-wp-sitemapxml-search-0467e928ff",
+      "name": "WordPress Wp Sitemap.Xml Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `wp-sitemap.xml` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"wp-sitemap.xml\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"wp-sitemap.xml\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-xmlrpc-search-e881a12f3c",
+      "name": "WordPress XML-RPC Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches a target domain for publicly indexed recon-relevant pages associated with WordPress. This is useful for spotting public CMS components, admin surfaces, and implementation clues.",
+      "query_template": "site:{domain} inurl:\"/xmlrpc.php\" intitle:\"XML-RPC\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com inurl:\"/xmlrpc.php\" intitle:\"XML-RPC\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cms-wordpress-xmlrpcphp-search-c2e2a6c8c9",
+      "name": "WordPress Xmlrpc.Php Search",
+      "category": "CMS Queries",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the `xmlrpc.php` surface associated with WordPress. This helps identify public CMS components, uploads, admin routes, and implementation clues.",
+      "query_template": "site:{domain} \"xmlrpc.php\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cms",
+        "google",
+        "recon",
+        "wordpress"
+      ],
+      "example": "site:example.com \"xmlrpc.php\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    }
+  ]
+}

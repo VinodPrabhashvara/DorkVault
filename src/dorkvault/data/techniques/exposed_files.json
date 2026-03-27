@@ -1,0 +1,3908 @@
+{
+  "category_id": "exposed_files",
+  "category_name": "Exposed Files",
+  "description": "Target-scoped file and directory discovery searches for public documents, logs, backups, exports, and browsable directory listings.",
+  "display_order": 100,
+  "techniques": [
+    {
+      "id": "exposed_files-access-denied-log-search-4046e4b621",
+      "name": "Access Denied LOG Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `access denied` inside public `log` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:log \"access denied\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:log \"access denied\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-application-error-log-search-0207787972",
+      "name": "Application Error LOG Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `application error` inside public `log` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:log \"application error\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:log \"application error\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-architecture-doc-search-35021686f1",
+      "name": "Architecture DOC Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `architecture` inside public `doc` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:doc \"architecture\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:doc \"architecture\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-architecture-pdf-search-ad08f8c4c4",
+      "name": "Architecture PDF Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `architecture` inside public `pdf` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:pdf \"architecture\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:pdf \"architecture\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-7z-search-109504cc0f",
+      "name": "Archive 7Z Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `7z` files that mention `archive`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:7z archive",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:7z archive",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-backup-search-54a149d9e2",
+      "name": "Archive BACKUP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `backup` files that mention `archive`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:backup archive",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:backup archive",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-bak-search-f1474ab8c3",
+      "name": "Archive BAK Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bak` files that mention `archive`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bak archive",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bak archive",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-bundle-search-642268decd",
+      "name": "Archive BUNDLE Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bundle` files that mention `archive`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bundle archive",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bundle archive",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-directory-listing-search-2017444721",
+      "name": "Archive Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `archive`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"archive\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"archive\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-gz-search-01a048d5a8",
+      "name": "Archive GZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `gz` files that mention `archive`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:gz archive",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:gz archive",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-old-search-84d06323d9",
+      "name": "Archive OLD Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `old` files that mention `archive`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:old archive",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:old archive",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-rar-search-2584643a3f",
+      "name": "Archive RAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `rar` files that mention `archive`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:rar archive",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:rar archive",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-tar-search-bd05c49bde",
+      "name": "Archive TAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tar` files that mention `archive`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tar archive",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tar archive",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-tgz-search-0b16a2adbb",
+      "name": "Archive TGZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tgz` files that mention `archive`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tgz archive",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tgz archive",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-archive-zip-search-61d54356fa",
+      "name": "Archive ZIP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `zip` files that mention `archive`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:zip archive",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:zip archive",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-asset-index-xml-search-33f2d3bc29",
+      "name": "Asset Index XML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `asset index` inside public `xml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xml \"asset index\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xml \"asset index\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-asset-inventory-csv-search-80364ffbdf",
+      "name": "Asset Inventory CSV Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `asset inventory` inside public `csv` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:csv \"asset inventory\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:csv \"asset inventory\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-asset-inventory-xls-search-c16d50ef01",
+      "name": "Asset Inventory XLS Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `asset inventory` inside public `xls` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xls \"asset inventory\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xls \"asset inventory\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-asset-inventory-xlsx-search-f5eee71ec6",
+      "name": "Asset Inventory XLSX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `asset inventory` inside public `xlsx` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xlsx \"asset inventory\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xlsx \"asset inventory\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-assets-directory-listing-search-a6e8d56e6a",
+      "name": "Assets Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `assets`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"assets\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"assets\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-7z-search-7a6fb651da",
+      "name": "Backup 7Z Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `7z` files that mention `backup`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:7z backup",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:7z backup",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-backup-search-235416f7fc",
+      "name": "Backup BACKUP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `backup` files that mention `backup`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:backup backup",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:backup backup",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-bak-search-a54c42e770",
+      "name": "Backup BAK Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bak` files that mention `backup`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bak backup",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bak backup",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-bundle-search-0bffa1fc00",
+      "name": "Backup BUNDLE Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bundle` files that mention `backup`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bundle backup",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bundle backup",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-directory-listing-search-2035a80534",
+      "name": "Backup Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for directory listing pages. This helps identify public files, directory listings, or document collections that support authorized recon.",
+      "query_template": "site:{domain} intitle:\"index of\" \"backup\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"backup\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-gz-search-7d4d8c5f6b",
+      "name": "Backup GZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `gz` files that mention `backup`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:gz backup",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:gz backup",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-old-search-a5b5b110d3",
+      "name": "Backup OLD Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `old` files that mention `backup`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:old backup",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:old backup",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-rar-search-c440e6fda6",
+      "name": "Backup RAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `rar` files that mention `backup`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:rar backup",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:rar backup",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-tar-search-e0c792aec1",
+      "name": "Backup TAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tar` files that mention `backup`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tar backup",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tar backup",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-tgz-search-a24144ed5c",
+      "name": "Backup TGZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tgz` files that mention `backup`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tgz backup",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tgz backup",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-backup-zip-search-d8bf3c1ac8",
+      "name": "Backup ZIP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `zip` files that mention `backup`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:zip backup",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:zip backup",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-build-directory-listing-search-ec53b7ebc1",
+      "name": "Build Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `build`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"build\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"build\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-bundle-7z-search-c4a56bc4a3",
+      "name": "Bundle 7Z Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `7z` files that mention `bundle`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:7z bundle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:7z bundle",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-bundle-backup-search-08ee1670ac",
+      "name": "Bundle BACKUP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `backup` files that mention `bundle`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:backup bundle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:backup bundle",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-bundle-bak-search-e46bb378d0",
+      "name": "Bundle BAK Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bak` files that mention `bundle`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bak bundle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bak bundle",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-bundle-bundle-search-71514d4bd0",
+      "name": "Bundle BUNDLE Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bundle` files that mention `bundle`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bundle bundle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bundle bundle",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-bundle-gz-search-67aa1d628b",
+      "name": "Bundle GZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `gz` files that mention `bundle`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:gz bundle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:gz bundle",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-bundle-old-search-fabee1a372",
+      "name": "Bundle OLD Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `old` files that mention `bundle`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:old bundle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:old bundle",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-bundle-rar-search-80a5ab5e33",
+      "name": "Bundle RAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `rar` files that mention `bundle`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:rar bundle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:rar bundle",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-bundle-tar-search-44ef31f385",
+      "name": "Bundle TAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tar` files that mention `bundle`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tar bundle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tar bundle",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-bundle-tgz-search-1c10281dff",
+      "name": "Bundle TGZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tgz` files that mention `bundle`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tgz bundle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tgz bundle",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-bundle-zip-search-54b34df42e",
+      "name": "Bundle ZIP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `zip` files that mention `bundle`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:zip bundle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:zip bundle",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-change-log-xlsx-search-f1ae3300e2",
+      "name": "Change Log XLSX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `change log` inside public `xlsx` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xlsx \"change log\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xlsx \"change log\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-changelog-txt-search-396a57e38d",
+      "name": "Changelog TXT Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `changelog` inside public `txt` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:txt \"changelog\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:txt \"changelog\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-deployment-checklist-doc-search-41e784cc88",
+      "name": "Deployment Checklist DOC Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `deployment checklist` inside public `doc` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:doc \"deployment checklist\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:doc \"deployment checklist\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-deployment-guide-pdf-search-9f4e09b6a5",
+      "name": "Deployment Guide PDF Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `deployment guide` inside public `pdf` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:pdf \"deployment guide\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:pdf \"deployment guide\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-deployment-guide-txt-search-dc124c6bd5",
+      "name": "Deployment Guide TXT Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `deployment guide` inside public `txt` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:txt \"deployment guide\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:txt \"deployment guide\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-deployment-guide-yaml-search-bc0778b2b2",
+      "name": "Deployment Guide YAML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `deployment guide` inside public `yaml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:yaml \"deployment guide\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:yaml \"deployment guide\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-deployment-guide-yml-search-addf826acc",
+      "name": "Deployment Guide YML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `deployment guide` inside public `yml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:yml \"deployment guide\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:yml \"deployment guide\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-directory-listing-search-107885d2dc",
+      "name": "Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for directory listing pages. This helps identify public files, directory listings, or document collections that support authorized recon.",
+      "query_template": "site:{domain} intitle:\"index of\" \"parent directory\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"parent directory\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-docs-directory-listing-search-ab49c02a09",
+      "name": "Docs Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `docs`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"docs\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"docs\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-downloads-directory-listing-search-088c6d488d",
+      "name": "Downloads Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `downloads`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"downloads\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"downloads\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-endpoint-inventory-csv-search-7f6d12418f",
+      "name": "Endpoint Inventory CSV Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `endpoint inventory` inside public `csv` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:csv \"endpoint inventory\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:csv \"endpoint inventory\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-endpoint-inventory-docx-search-41dfd4c792",
+      "name": "Endpoint Inventory DOCX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `endpoint inventory` inside public `docx` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:docx \"endpoint inventory\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:docx \"endpoint inventory\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-export-7z-search-b372a62836",
+      "name": "Export 7Z Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `7z` files that mention `export`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:7z export",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:7z export",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-export-backup-search-3f567563be",
+      "name": "Export BACKUP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `backup` files that mention `export`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:backup export",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:backup export",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-export-bak-search-731f6866a5",
+      "name": "Export BAK Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bak` files that mention `export`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bak export",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bak export",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-export-bundle-search-9b8790c412",
+      "name": "Export BUNDLE Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bundle` files that mention `export`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bundle export",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bundle export",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-export-gz-search-79d759a229",
+      "name": "Export GZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `gz` files that mention `export`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:gz export",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:gz export",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-export-old-search-b1aa4a3f38",
+      "name": "Export OLD Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `old` files that mention `export`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:old export",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:old export",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-export-rar-search-91cf131723",
+      "name": "Export RAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `rar` files that mention `export`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:rar export",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:rar export",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-export-tar-search-1bf9344694",
+      "name": "Export TAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tar` files that mention `export`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tar export",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tar export",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-export-tgz-search-7e8428f743",
+      "name": "Export TGZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tgz` files that mention `export`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tgz export",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tgz export",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-export-zip-search-25d6f8f714",
+      "name": "Export ZIP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `zip` files that mention `export`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:zip export",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:zip export",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-exports-directory-listing-search-acb926a4c4",
+      "name": "Exports Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `exports`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"exports\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"exports\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-feed-xml-search-124dcffcc2",
+      "name": "Feed XML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `feed` inside public `xml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xml \"feed\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xml \"feed\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-files-directory-listing-search-bff249cf82",
+      "name": "Files Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `files`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"files\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"files\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-guides-directory-listing-search-6c2a462900",
+      "name": "Guides Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `guides`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"guides\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"guides\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-host-list-csv-search-e9b051b6f8",
+      "name": "Host List CSV Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `host list` inside public `csv` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:csv \"host list\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:csv \"host list\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-htdocs-directory-listing-search-f94113a9ea",
+      "name": "Htdocs Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `htdocs`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"htdocs\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"htdocs\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-images-directory-listing-search-15128c2b11",
+      "name": "Images Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `images`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"images\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"images\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-incident-report-pdf-search-75f1846a7e",
+      "name": "Incident Report PDF Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `incident report` inside public `pdf` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:pdf \"incident report\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:pdf \"incident report\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-integration-guide-doc-search-e048f6712d",
+      "name": "Integration Guide DOC Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `integration guide` inside public `doc` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:doc \"integration guide\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:doc \"integration guide\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-inventory-report-xlsx-search-e8277a5b41",
+      "name": "Inventory Report XLSX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `inventory report` inside public `xlsx` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xlsx \"inventory report\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xlsx \"inventory report\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-log-directory-listing-search-8524bdd3f7",
+      "name": "Log Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for directory listing pages. This helps identify public files, directory listings, or document collections that support authorized recon.",
+      "query_template": "site:{domain} intitle:\"index of\" \"logs\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"logs\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-log-file-search-db63ba66b4",
+      "name": "Log File Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for error messages and framework leakage. This helps identify public files, directory listings, or document collections that support authorized recon.",
+      "query_template": "site:{domain} filetype:log \"error\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "files",
+        "google",
+        "logs",
+        "recon"
+      ],
+      "example": "site:example.com filetype:log \"error\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-manifest-json-search-481c67ded4",
+      "name": "Manifest JSON Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `manifest` inside public `json` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:json \"manifest\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:json \"manifest\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-manuals-directory-listing-search-691132c295",
+      "name": "Manuals Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `manuals`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"manuals\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"manuals\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-media-directory-listing-search-82ddd560f3",
+      "name": "Media Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `media`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"media\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"media\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-network-diagram-docx-search-ea3bf1a47e",
+      "name": "Network Diagram DOCX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `network diagram` inside public `docx` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:docx \"network diagram\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:docx \"network diagram\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-operations-manual-doc-search-4cca276b94",
+      "name": "Operations Manual DOC Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `operations manual` inside public `doc` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:doc \"operations manual\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:doc \"operations manual\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-operations-manual-docx-search-23cc7f76d3",
+      "name": "Operations Manual DOCX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `operations manual` inside public `docx` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:docx \"operations manual\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:docx \"operations manual\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-operations-manual-yaml-search-fe2ce1b99e",
+      "name": "Operations Manual YAML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `operations manual` inside public `yaml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:yaml \"operations manual\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:yaml \"operations manual\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-operations-manual-yml-search-514944907a",
+      "name": "Operations Manual YML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `operations manual` inside public `yml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:yml \"operations manual\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:yml \"operations manual\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-packages-directory-listing-search-8f457a355e",
+      "name": "Packages Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `packages`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"packages\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"packages\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-project-brief-docx-search-cc1b47d81f",
+      "name": "Project Brief DOCX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `project brief` inside public `docx` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:docx \"project brief\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:docx \"project brief\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-public-directory-listing-search-43a467aa21",
+      "name": "Public Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `public`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"public\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"public\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-public-doc-search-cc5d6d9994",
+      "name": "Public DOC Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for public office documents. This helps identify public files, directory listings, or document collections that support authorized recon.",
+      "query_template": "site:{domain} filetype:doc \"internal use only\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:doc \"internal use only\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-public-docx-search-1b6f40cd02",
+      "name": "Public DOCX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for public office documents. This helps identify public files, directory listings, or document collections that support authorized recon.",
+      "query_template": "site:{domain} filetype:docx \"private\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:docx \"private\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-public-pdf-search-ccc788c2a2",
+      "name": "Public PDF Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for public PDF documents. This helps identify public files, directory listings, or document collections that support authorized recon.",
+      "query_template": "site:{domain} filetype:pdf \"internal use only\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:pdf \"internal use only\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-public-spreadsheet-search-1c0adc2dc5",
+      "name": "Public Spreadsheet Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for public spreadsheets and exported reports. This helps identify public files, directory listings, or document collections that support authorized recon.",
+      "query_template": "site:{domain} filetype:xlsx \"confidential\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "files",
+        "google",
+        "recon",
+        "spreadsheets"
+      ],
+      "example": "site:example.com filetype:xlsx \"confidential\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-7z-search-5a62a02c7d",
+      "name": "Release 7Z Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `7z` files that mention `release`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:7z release",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:7z release",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-backup-search-7021e64d0d",
+      "name": "Release BACKUP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `backup` files that mention `release`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:backup release",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:backup release",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-bak-search-a5fe43bc2a",
+      "name": "Release BAK Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bak` files that mention `release`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bak release",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bak release",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-bundle-search-52aeb81c66",
+      "name": "Release BUNDLE Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bundle` files that mention `release`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bundle release",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bundle release",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-gz-search-2e2105a559",
+      "name": "Release GZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `gz` files that mention `release`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:gz release",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:gz release",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-notes-json-search-6bfde250ae",
+      "name": "Release Notes JSON Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `release notes` inside public `json` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:json \"release notes\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:json \"release notes\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-notes-pdf-search-85f7138d13",
+      "name": "Release Notes PDF Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `release notes` inside public `pdf` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:pdf \"release notes\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:pdf \"release notes\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-notes-xls-search-a76153b0ae",
+      "name": "Release Notes XLS Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `release notes` inside public `xls` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xls \"release notes\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xls \"release notes\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-notes-xml-search-20951458fb",
+      "name": "Release Notes XML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `release notes` inside public `xml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xml \"release notes\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xml \"release notes\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-old-search-2a5feecee1",
+      "name": "Release OLD Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `old` files that mention `release`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:old release",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:old release",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-plan-yaml-search-52c632be4c",
+      "name": "Release Plan YAML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `release plan` inside public `yaml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:yaml \"release plan\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:yaml \"release plan\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-plan-yml-search-bf9b3d54fa",
+      "name": "Release Plan YML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `release plan` inside public `yml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:yml \"release plan\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:yml \"release plan\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-rar-search-fd45baebca",
+      "name": "Release RAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `rar` files that mention `release`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:rar release",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:rar release",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-tar-search-a5299ddde0",
+      "name": "Release TAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tar` files that mention `release`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tar release",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tar release",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-tgz-search-bcf05ab6bd",
+      "name": "Release TGZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tgz` files that mention `release`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tgz release",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tgz release",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-release-zip-search-a36dc72c79",
+      "name": "Release ZIP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `zip` files that mention `release`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:zip release",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:zip release",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-releases-directory-listing-search-d582eaee92",
+      "name": "Releases Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `releases`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"releases\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"releases\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-reports-directory-listing-search-d04fc50aea",
+      "name": "Reports Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `reports`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"reports\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"reports\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-revisions-directory-listing-search-2a0df09b2c",
+      "name": "Revisions Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `revisions`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"revisions\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"revisions\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-runbook-pdf-search-44c14b00a6",
+      "name": "Runbook PDF Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `runbook` inside public `pdf` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:pdf \"runbook\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:pdf \"runbook\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-runbook-txt-search-d98c632fd0",
+      "name": "Runbook TXT Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `runbook` inside public `txt` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:txt \"runbook\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:txt \"runbook\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-catalog-docx-search-0384a9fccf",
+      "name": "Service Catalog DOCX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service catalog` inside public `docx` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:docx \"service catalog\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:docx \"service catalog\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-catalog-json-search-99575fc9be",
+      "name": "Service Catalog JSON Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service catalog` inside public `json` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:json \"service catalog\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:json \"service catalog\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-catalog-pdf-search-5178b53cff",
+      "name": "Service Catalog PDF Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service catalog` inside public `pdf` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:pdf \"service catalog\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:pdf \"service catalog\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-catalog-txt-search-f60f7733e7",
+      "name": "Service Catalog TXT Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service catalog` inside public `txt` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:txt \"service catalog\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:txt \"service catalog\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-catalog-xlsx-search-523e97ca3b",
+      "name": "Service Catalog XLSX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service catalog` inside public `xlsx` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xlsx \"service catalog\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xlsx \"service catalog\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-catalog-yaml-search-64f3a1db92",
+      "name": "Service Catalog YAML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service catalog` inside public `yaml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:yaml \"service catalog\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:yaml \"service catalog\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-catalog-yml-search-3a20875bc3",
+      "name": "Service Catalog YML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service catalog` inside public `yml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:yml \"service catalog\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:yml \"service catalog\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-index-xml-search-8f7fe556d7",
+      "name": "Service Index XML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service index` inside public `xml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xml \"service index\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xml \"service index\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-list-csv-search-f6cbaee230",
+      "name": "Service List CSV Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service list` inside public `csv` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:csv \"service list\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:csv \"service list\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-list-xls-search-db95b637fb",
+      "name": "Service List XLS Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service list` inside public `xls` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xls \"service list\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xls \"service list\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-service-unavailable-log-search-4e0aa1ae45",
+      "name": "Service Unavailable LOG Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `service unavailable` inside public `log` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:log \"service unavailable\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:log \"service unavailable\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-site-map-json-search-915253f987",
+      "name": "Site Map JSON Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `site map` inside public `json` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:json \"site map\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:json \"site map\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-site-map-xls-search-7227d45cdb",
+      "name": "Site Map XLS Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `site map` inside public `xls` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xls \"site map\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xls \"site map\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-sitemap-xml-search-0adfd801ca",
+      "name": "Sitemap XML Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `sitemap` inside public `xml` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xml \"sitemap\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xml \"sitemap\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshot-7z-search-cfcad99608",
+      "name": "Snapshot 7Z Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `7z` files that mention `snapshot`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:7z snapshot",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:7z snapshot",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshot-backup-search-f8e6b3c731",
+      "name": "Snapshot BACKUP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `backup` files that mention `snapshot`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:backup snapshot",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:backup snapshot",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshot-bak-search-7281915620",
+      "name": "Snapshot BAK Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bak` files that mention `snapshot`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bak snapshot",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bak snapshot",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshot-bundle-search-4f32663691",
+      "name": "Snapshot BUNDLE Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `bundle` files that mention `snapshot`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:bundle snapshot",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:bundle snapshot",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshot-gz-search-13929dee92",
+      "name": "Snapshot GZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `gz` files that mention `snapshot`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:gz snapshot",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:gz snapshot",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshot-old-search-97aeb71b4b",
+      "name": "Snapshot OLD Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `old` files that mention `snapshot`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:old snapshot",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:old snapshot",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshot-rar-search-f8105c552b",
+      "name": "Snapshot RAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `rar` files that mention `snapshot`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:rar snapshot",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:rar snapshot",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshot-tar-search-16600db154",
+      "name": "Snapshot TAR Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tar` files that mention `snapshot`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tar snapshot",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tar snapshot",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshot-tgz-search-451174c3af",
+      "name": "Snapshot TGZ Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `tgz` files that mention `snapshot`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:tgz snapshot",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:tgz snapshot",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshot-zip-search-8bc9382d67",
+      "name": "Snapshot ZIP Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed results on a target domain for `zip` files that mention `snapshot`. This supports safe discovery of public backup-like artifacts and release bundles.",
+      "query_template": "site:{domain} ext:zip snapshot",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "backups",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com ext:zip snapshot",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-snapshots-directory-listing-search-2d58e3fdbb",
+      "name": "Snapshots Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `snapshots`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"snapshots\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"snapshots\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-source-directory-listing-search-9da1640146",
+      "name": "Source Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `source`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"source\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"source\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-src-directory-listing-search-bd3aefbbfc",
+      "name": "Src Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `src`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"src\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"src\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-stack-trace-log-search-4498a3a636",
+      "name": "Stack Trace LOG Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `stack trace` inside public `log` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:log \"stack trace\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:log \"stack trace\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-static-directory-listing-search-1b6fa9ef87",
+      "name": "Static Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `static`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"static\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"static\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-status-notes-txt-search-1201ef00b0",
+      "name": "Status Notes TXT Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `status notes` inside public `txt` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:txt \"status notes\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:txt \"status notes\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-status-page-json-search-4552140a6a",
+      "name": "Status Page JSON Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `status page` inside public `json` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:json \"status page\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:json \"status page\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-status-report-xls-search-7e2432e5a6",
+      "name": "Status Report XLS Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `status report` inside public `xls` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xls \"status report\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xls \"status report\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-status-report-xlsx-search-5879b925cf",
+      "name": "Status Report XLSX Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `status report` inside public `xlsx` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:xlsx \"status report\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:xlsx \"status report\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-subdomain-list-csv-search-8eb1429795",
+      "name": "Subdomain List CSV Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `subdomain list` inside public `csv` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:csv \"subdomain list\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:csv \"subdomain list\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-uploads-directory-listing-search-f345aa9f62",
+      "name": "Uploads Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for directory listing pages. This helps identify public files, directory listings, or document collections that support authorized recon.",
+      "query_template": "site:{domain} intitle:\"index of\" \"uploads\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"uploads\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-user-guide-doc-search-62ce1ea3ad",
+      "name": "User Guide DOC Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `user guide` inside public `doc` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:doc \"user guide\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:doc \"user guide\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-user-guide-pdf-search-096a135d72",
+      "name": "User Guide PDF Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for `user guide` inside public `pdf` files. This supports safe discovery of documents, reports, and operational references.",
+      "query_template": "site:{domain} filetype:pdf \"user guide\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "documents",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filetype:pdf \"user guide\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "exposed_files-wwwroot-directory-listing-search-c095fc21bf",
+      "name": "Wwwroot Directory Listing Search",
+      "category": "Exposed Files",
+      "engine": "Google",
+      "description": "Searches for indexed directory listing pages on a target domain that reference `wwwroot`. This helps find public directories, release archives, and browsable asset locations.",
+      "query_template": "site:{domain} intitle:\"index of\" \"wwwroot\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "directory-listing",
+        "files",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com intitle:\"index of\" \"wwwroot\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    }
+  ]
+}

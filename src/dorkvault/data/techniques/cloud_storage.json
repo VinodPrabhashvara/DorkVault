@@ -1,0 +1,4382 @@
+{
+  "category_id": "cloud_storage",
+  "category_name": "Cloud Storage",
+  "description": "Search-based recon queries for public cloud storage references associated with a company, brand, keyword, or target domain.",
+  "display_order": 60,
+  "techniques": [
+    {
+      "id": "cloud_storage-amazon-s3-archive-reference-search-9f2fc77142",
+      "name": "Amazon S3 Archive Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `archive` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"archive\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"archive\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-artifacts-reference-search-7b52550fba",
+      "name": "Amazon S3 Artifacts Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `artifacts` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"artifacts\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"artifacts\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-assets-reference-search-2354ae127d",
+      "name": "Amazon S3 Assets Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `assets` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"assets\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"assets\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-backup-reference-search-6700ccc81e",
+      "name": "Amazon S3 Backup Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `backup` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"backup\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"backup\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-build-reference-search-5b8543c36a",
+      "name": "Amazon S3 Build Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `build` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"build\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"build\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-cdn-reference-search-0a181f4883",
+      "name": "Amazon S3 Cdn Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `cdn` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"cdn\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"cdn\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-customer-exports-reference-search-92e97fb545",
+      "name": "Amazon S3 Customer Exports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `customer exports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"customer exports\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"customer exports\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-data-feeds-reference-search-11025ba175",
+      "name": "Amazon S3 Data Feeds Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `data feeds` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"data feeds\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"data feeds\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-documentation-reference-search-b6f056a4c3",
+      "name": "Amazon S3 Documentation Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `documentation` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"documentation\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"documentation\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-domain-reference-search-1f364189e1",
+      "name": "Amazon S3 Domain Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 that also contain the target domain. This helps identify public storage paths, screenshots, and documentation tied to the host.",
+      "query_template": "\"{domain}\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "domain-references",
+        "google",
+        "s3",
+        "storage"
+      ],
+      "example": "\"example.com\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-downloads-reference-search-d40d5326df",
+      "name": "Amazon S3 Downloads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `downloads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"downloads\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"downloads\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-images-reference-search-46a7e11eaf",
+      "name": "Amazon S3 Images Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `images` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"images\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"images\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-keyword-reference-search-b1fb886d1b",
+      "name": "Amazon S3 Keyword Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 that also contain a keyword or product name. This helps surface public file paths, asset references, and bucket naming clues.",
+      "query_template": "\"{keyword}\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "keyword-search",
+        "s3",
+        "storage"
+      ],
+      "example": "\"customer portal\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-manuals-reference-search-eb9ad1d3f7",
+      "name": "Amazon S3 Manuals Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `manuals` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"manuals\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"manuals\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-media-reference-search-efd5f5bbd1",
+      "name": "Amazon S3 Media Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `media` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"media\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"media\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-openapi-reference-search-1e46f0638f",
+      "name": "Amazon S3 Openapi Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `openapi` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"openapi\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"openapi\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-packages-reference-search-38ae0771b3",
+      "name": "Amazon S3 Packages Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `packages` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"packages\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"packages\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-public-files-reference-search-9a2732fa27",
+      "name": "Amazon S3 Public Files Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `public files` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"public files\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"public files\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-releases-reference-search-dacafaacc8",
+      "name": "Amazon S3 Releases Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `releases` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"releases\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"releases\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-reports-reference-search-007e4858d5",
+      "name": "Amazon S3 Reports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `reports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"reports\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"reports\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-screenshots-reference-search-dd552c4bd6",
+      "name": "Amazon S3 Screenshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `screenshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"screenshots\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"screenshots\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-sitemaps-reference-search-089186a20a",
+      "name": "Amazon S3 Sitemaps Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `sitemaps` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"sitemaps\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"sitemaps\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-snapshots-reference-search-2c53753681",
+      "name": "Amazon S3 Snapshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `snapshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"snapshots\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"snapshots\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-static-reference-search-73bddf6d31",
+      "name": "Amazon S3 Static Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `static` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"static\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"static\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-support-reference-search-bf3abd7d31",
+      "name": "Amazon S3 Support Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `support` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"support\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"support\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-temporary-reference-search-196cd00108",
+      "name": "Amazon S3 Temporary Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `temporary` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"temporary\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"temporary\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-amazon-s3-uploads-reference-search-33014eacfa",
+      "name": "Amazon S3 Uploads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Amazon S3 together with the phrase `uploads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"uploads\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "s3",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"uploads\" (site:s3.amazonaws.com OR site:amazonaws.com)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-archive-reference-search-9ee7420453",
+      "name": "Azure Blob Archive Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `archive` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"archive\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"archive\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-artifacts-reference-search-d4a81c9a77",
+      "name": "Azure Blob Artifacts Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `artifacts` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"artifacts\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"artifacts\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-assets-reference-search-5c6462fb65",
+      "name": "Azure Blob Assets Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `assets` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"assets\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"assets\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-backup-reference-search-6113734149",
+      "name": "Azure Blob Backup Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `backup` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"backup\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"backup\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-build-reference-search-ceb41311e0",
+      "name": "Azure Blob Build Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `build` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"build\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"build\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-cdn-reference-search-27354b5e0e",
+      "name": "Azure Blob Cdn Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `cdn` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"cdn\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"cdn\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-customer-exports-reference-search-abc323a2c9",
+      "name": "Azure Blob Customer Exports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `customer exports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"customer exports\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"customer exports\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-data-feeds-reference-search-503f79b296",
+      "name": "Azure Blob Data Feeds Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `data feeds` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"data feeds\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"data feeds\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-documentation-reference-search-e05063494a",
+      "name": "Azure Blob Documentation Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `documentation` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"documentation\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"documentation\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-domain-reference-search-6aed52e652",
+      "name": "Azure Blob Domain Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob that also contain the target domain. This helps identify public storage paths, screenshots, and documentation tied to the host.",
+      "query_template": "\"{domain}\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "domain-references",
+        "google",
+        "storage"
+      ],
+      "example": "\"example.com\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-downloads-reference-search-60dcc4f8c1",
+      "name": "Azure Blob Downloads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `downloads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"downloads\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"downloads\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-images-reference-search-2fabed685c",
+      "name": "Azure Blob Images Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `images` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"images\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"images\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-keyword-reference-search-a17f239f99",
+      "name": "Azure Blob Keyword Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob that also contain a keyword or product name. This helps surface public file paths, asset references, and bucket naming clues.",
+      "query_template": "\"{keyword}\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "keyword-search",
+        "storage"
+      ],
+      "example": "\"customer portal\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-manuals-reference-search-e6c082724f",
+      "name": "Azure Blob Manuals Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `manuals` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"manuals\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"manuals\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-media-reference-search-ee7602bd7d",
+      "name": "Azure Blob Media Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `media` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"media\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"media\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-openapi-reference-search-03ba333716",
+      "name": "Azure Blob Openapi Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `openapi` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"openapi\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"openapi\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-packages-reference-search-3ba5f07b50",
+      "name": "Azure Blob Packages Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `packages` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"packages\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"packages\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-public-files-reference-search-08d7c29f3a",
+      "name": "Azure Blob Public Files Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `public files` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"public files\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"public files\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-releases-reference-search-d1051fc7cd",
+      "name": "Azure Blob Releases Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `releases` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"releases\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"releases\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-reports-reference-search-46a9985976",
+      "name": "Azure Blob Reports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `reports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"reports\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"reports\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-screenshots-reference-search-606cea84f1",
+      "name": "Azure Blob Screenshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `screenshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"screenshots\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"screenshots\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-sitemaps-reference-search-a7adc5c4fc",
+      "name": "Azure Blob Sitemaps Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `sitemaps` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"sitemaps\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"sitemaps\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-snapshots-reference-search-53dccf8280",
+      "name": "Azure Blob Snapshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `snapshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"snapshots\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"snapshots\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-static-reference-search-b0a22f9daa",
+      "name": "Azure Blob Static Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `static` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"static\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"static\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-support-reference-search-84dd46c5ed",
+      "name": "Azure Blob Support Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `support` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"support\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"support\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-temporary-reference-search-a283cbe42c",
+      "name": "Azure Blob Temporary Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `temporary` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"temporary\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"temporary\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-azure-blob-uploads-reference-search-8d31339a00",
+      "name": "Azure Blob Uploads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Azure Blob together with the phrase `uploads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"uploads\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "azure",
+        "cloud",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"uploads\" (site:blob.core.windows.net OR site:dfs.core.windows.net)",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-archive-reference-search-39bd62c179",
+      "name": "Cloudflare R2 Archive Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `archive` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"archive\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"archive\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-artifacts-reference-search-c732960c9e",
+      "name": "Cloudflare R2 Artifacts Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `artifacts` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"artifacts\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"artifacts\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-assets-reference-search-fcbeb18c0c",
+      "name": "Cloudflare R2 Assets Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `assets` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"assets\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"assets\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-backup-reference-search-33ab853dd5",
+      "name": "Cloudflare R2 Backup Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `backup` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"backup\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"backup\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-build-reference-search-bf7cd74183",
+      "name": "Cloudflare R2 Build Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `build` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"build\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"build\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-cdn-reference-search-bdf15c6201",
+      "name": "Cloudflare R2 Cdn Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `cdn` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"cdn\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"cdn\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-customer-exports-reference-search-f8a344e30b",
+      "name": "Cloudflare R2 Customer Exports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `customer exports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"customer exports\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"customer exports\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-data-feeds-reference-search-4cec1918ab",
+      "name": "Cloudflare R2 Data Feeds Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `data feeds` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"data feeds\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"data feeds\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-documentation-reference-search-6452e345ff",
+      "name": "Cloudflare R2 Documentation Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `documentation` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"documentation\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"documentation\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-domain-reference-search-787dbf3fb7",
+      "name": "Cloudflare R2 Domain Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 that also contain the target domain. This helps identify public storage paths, screenshots, and documentation tied to the host.",
+      "query_template": "\"{domain}\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "domain-references",
+        "google",
+        "r2",
+        "storage"
+      ],
+      "example": "\"example.com\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-downloads-reference-search-c9bcb54d12",
+      "name": "Cloudflare R2 Downloads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `downloads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"downloads\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"downloads\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-images-reference-search-b53de135bb",
+      "name": "Cloudflare R2 Images Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `images` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"images\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"images\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-keyword-reference-search-5e3b58e8b5",
+      "name": "Cloudflare R2 Keyword Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 that also contain a keyword or product name. This helps surface public file paths, asset references, and bucket naming clues.",
+      "query_template": "\"{keyword}\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "keyword-search",
+        "r2",
+        "storage"
+      ],
+      "example": "\"customer portal\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-manuals-reference-search-20a1eba383",
+      "name": "Cloudflare R2 Manuals Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `manuals` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"manuals\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"manuals\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-media-reference-search-d7e17935c3",
+      "name": "Cloudflare R2 Media Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `media` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"media\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"media\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-openapi-reference-search-7d78947e9a",
+      "name": "Cloudflare R2 Openapi Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `openapi` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"openapi\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"openapi\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-packages-reference-search-da9ec89a96",
+      "name": "Cloudflare R2 Packages Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `packages` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"packages\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"packages\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-public-files-reference-search-e70dbb87c0",
+      "name": "Cloudflare R2 Public Files Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `public files` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"public files\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"public files\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-releases-reference-search-b178413096",
+      "name": "Cloudflare R2 Releases Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `releases` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"releases\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"releases\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-reports-reference-search-7e1f9c950b",
+      "name": "Cloudflare R2 Reports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `reports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"reports\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"reports\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-screenshots-reference-search-c3230b4a46",
+      "name": "Cloudflare R2 Screenshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `screenshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"screenshots\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"screenshots\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-sitemaps-reference-search-0be3ad06b3",
+      "name": "Cloudflare R2 Sitemaps Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `sitemaps` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"sitemaps\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"sitemaps\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-snapshots-reference-search-1c0ef00252",
+      "name": "Cloudflare R2 Snapshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `snapshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"snapshots\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"snapshots\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-static-reference-search-0774b97463",
+      "name": "Cloudflare R2 Static Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `static` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"static\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"static\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-support-reference-search-e091d3f06d",
+      "name": "Cloudflare R2 Support Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `support` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"support\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"support\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-temporary-reference-search-d381f23d45",
+      "name": "Cloudflare R2 Temporary Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `temporary` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"temporary\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"temporary\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-cloudflare-r2-uploads-reference-search-c0b5165336",
+      "name": "Cloudflare R2 Uploads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Cloudflare R2 together with the phrase `uploads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"uploads\" site:r2.cloudflarestorage.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "r2",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"uploads\" site:r2.cloudflarestorage.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-archive-reference-search-a086a85690",
+      "name": "DigitalOcean Spaces Archive Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `archive` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"archive\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"archive\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-artifacts-reference-search-13953b2b93",
+      "name": "DigitalOcean Spaces Artifacts Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `artifacts` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"artifacts\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"artifacts\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-assets-reference-search-257c5e1741",
+      "name": "DigitalOcean Spaces Assets Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `assets` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"assets\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"assets\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-backup-reference-search-aac4f2dc88",
+      "name": "DigitalOcean Spaces Backup Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `backup` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"backup\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"backup\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-build-reference-search-575326673b",
+      "name": "DigitalOcean Spaces Build Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `build` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"build\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"build\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-cdn-reference-search-f48cae8284",
+      "name": "DigitalOcean Spaces Cdn Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `cdn` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"cdn\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"cdn\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-customer-exports-reference-search-bf8715de78",
+      "name": "DigitalOcean Spaces Customer Exports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `customer exports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"customer exports\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"customer exports\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-data-feeds-reference-search-1ede7c7bc7",
+      "name": "DigitalOcean Spaces Data Feeds Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `data feeds` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"data feeds\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"data feeds\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-documentation-reference-search-bc8f339a42",
+      "name": "DigitalOcean Spaces Documentation Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `documentation` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"documentation\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"documentation\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-domain-reference-search-3bb7a063f1",
+      "name": "DigitalOcean Spaces Domain Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces that also contain the target domain. This helps identify public storage paths, screenshots, and documentation tied to the host.",
+      "query_template": "\"{domain}\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "domain-references",
+        "google",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"example.com\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-downloads-reference-search-d3a3c6b2af",
+      "name": "DigitalOcean Spaces Downloads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `downloads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"downloads\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"downloads\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-images-reference-search-744a79de50",
+      "name": "DigitalOcean Spaces Images Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `images` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"images\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"images\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-keyword-reference-search-341737f941",
+      "name": "DigitalOcean Spaces Keyword Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces that also contain a keyword or product name. This helps surface public file paths, asset references, and bucket naming clues.",
+      "query_template": "\"{keyword}\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "keyword-search",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"customer portal\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-manuals-reference-search-ac97f88afe",
+      "name": "DigitalOcean Spaces Manuals Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `manuals` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"manuals\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"manuals\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-media-reference-search-33cd07eb65",
+      "name": "DigitalOcean Spaces Media Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `media` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"media\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"media\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-openapi-reference-search-6f43745bde",
+      "name": "DigitalOcean Spaces Openapi Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `openapi` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"openapi\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"openapi\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-packages-reference-search-70d8cba10d",
+      "name": "DigitalOcean Spaces Packages Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `packages` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"packages\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"packages\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-public-files-reference-search-dc532ded3c",
+      "name": "DigitalOcean Spaces Public Files Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `public files` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"public files\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"public files\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-releases-reference-search-b47b78a238",
+      "name": "DigitalOcean Spaces Releases Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `releases` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"releases\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"releases\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-reports-reference-search-3de053b0fb",
+      "name": "DigitalOcean Spaces Reports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `reports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"reports\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"reports\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-screenshots-reference-search-a80482a4ed",
+      "name": "DigitalOcean Spaces Screenshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `screenshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"screenshots\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"screenshots\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-sitemaps-reference-search-41b229328d",
+      "name": "DigitalOcean Spaces Sitemaps Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `sitemaps` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"sitemaps\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"sitemaps\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-snapshots-reference-search-499a25e9ad",
+      "name": "DigitalOcean Spaces Snapshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `snapshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"snapshots\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"snapshots\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-static-reference-search-23e3eadf36",
+      "name": "DigitalOcean Spaces Static Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `static` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"static\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"static\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-support-reference-search-849f117b85",
+      "name": "DigitalOcean Spaces Support Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `support` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"support\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"support\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-temporary-reference-search-3fea260661",
+      "name": "DigitalOcean Spaces Temporary Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `temporary` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"temporary\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"temporary\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-digitalocean-spaces-uploads-reference-search-29fb316553",
+      "name": "DigitalOcean Spaces Uploads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to DigitalOcean Spaces together with the phrase `uploads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"uploads\" site:digitaloceanspaces.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "spaces",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"uploads\" site:digitaloceanspaces.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-archive-reference-search-b3adb1c554",
+      "name": "Google Cloud Storage Archive Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `archive` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"archive\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"archive\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-artifacts-reference-search-36714c54a1",
+      "name": "Google Cloud Storage Artifacts Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `artifacts` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"artifacts\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"artifacts\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-assets-reference-search-5dec41e4f6",
+      "name": "Google Cloud Storage Assets Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `assets` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"assets\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"assets\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-backup-reference-search-f482ec4f57",
+      "name": "Google Cloud Storage Backup Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `backup` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"backup\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"backup\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-build-reference-search-2eedf55df7",
+      "name": "Google Cloud Storage Build Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `build` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"build\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"build\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-cdn-reference-search-9002cc54b2",
+      "name": "Google Cloud Storage Cdn Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `cdn` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"cdn\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"cdn\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-customer-exports-reference-669741373a",
+      "name": "Google Cloud Storage Customer Exports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `customer exports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"customer exports\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"customer exports\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-data-feeds-reference-a705992545",
+      "name": "Google Cloud Storage Data Feeds Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `data feeds` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"data feeds\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"data feeds\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-documentation-reference-search-9875c29697",
+      "name": "Google Cloud Storage Documentation Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `documentation` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"documentation\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"documentation\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-domain-reference-search-6665b729f0",
+      "name": "Google Cloud Storage Domain Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage that also contain the target domain. This helps identify public storage paths, screenshots, and documentation tied to the host.",
+      "query_template": "\"{domain}\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "domain-references",
+        "gcs",
+        "google",
+        "storage"
+      ],
+      "example": "\"example.com\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-downloads-reference-search-14df4398b4",
+      "name": "Google Cloud Storage Downloads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `downloads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"downloads\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"downloads\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-images-reference-search-779382a58a",
+      "name": "Google Cloud Storage Images Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `images` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"images\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"images\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-keyword-reference-search-f20f733658",
+      "name": "Google Cloud Storage Keyword Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage that also contain a keyword or product name. This helps surface public file paths, asset references, and bucket naming clues.",
+      "query_template": "\"{keyword}\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "keyword-search",
+        "storage"
+      ],
+      "example": "\"customer portal\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-manuals-reference-search-b4e951f202",
+      "name": "Google Cloud Storage Manuals Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `manuals` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"manuals\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"manuals\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-media-reference-search-e49a5c6070",
+      "name": "Google Cloud Storage Media Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `media` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"media\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"media\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-openapi-reference-search-85261af586",
+      "name": "Google Cloud Storage Openapi Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `openapi` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"openapi\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"openapi\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-packages-reference-search-46c91b1ebf",
+      "name": "Google Cloud Storage Packages Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `packages` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"packages\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"packages\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-public-files-reference-0f1becd099",
+      "name": "Google Cloud Storage Public Files Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `public files` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"public files\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"public files\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-releases-reference-search-9931341c73",
+      "name": "Google Cloud Storage Releases Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `releases` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"releases\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"releases\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-reports-reference-search-517aabf723",
+      "name": "Google Cloud Storage Reports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `reports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"reports\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"reports\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-screenshots-reference-search-8d5a6ea39c",
+      "name": "Google Cloud Storage Screenshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `screenshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"screenshots\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"screenshots\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-sitemaps-reference-search-07ba3b4fc5",
+      "name": "Google Cloud Storage Sitemaps Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `sitemaps` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"sitemaps\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"sitemaps\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-snapshots-reference-search-4bfd059cfa",
+      "name": "Google Cloud Storage Snapshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `snapshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"snapshots\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"snapshots\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-static-reference-search-d6637f4212",
+      "name": "Google Cloud Storage Static Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `static` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"static\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"static\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-support-reference-search-de260375bf",
+      "name": "Google Cloud Storage Support Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `support` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"support\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"support\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-temporary-reference-search-7072de18db",
+      "name": "Google Cloud Storage Temporary Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `temporary` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"temporary\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"temporary\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-google-cloud-storage-uploads-reference-search-ede9bcf15d",
+      "name": "Google Cloud Storage Uploads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Google Cloud Storage together with the phrase `uploads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"uploads\" site:storage.googleapis.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "gcs",
+        "google",
+        "references",
+        "storage"
+      ],
+      "example": "\"Example Corp\" \"uploads\" site:storage.googleapis.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-archive-reference-search-da8b746770",
+      "name": "Wasabi Archive Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `archive` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"archive\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"archive\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-artifacts-reference-search-e66a24091d",
+      "name": "Wasabi Artifacts Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `artifacts` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"artifacts\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"artifacts\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-assets-reference-search-4ec95f1195",
+      "name": "Wasabi Assets Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `assets` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"assets\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"assets\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-backup-reference-search-287ac66e33",
+      "name": "Wasabi Backup Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `backup` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"backup\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"backup\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-build-reference-search-cfdba43f38",
+      "name": "Wasabi Build Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `build` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"build\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"build\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-cdn-reference-search-20f1e5a609",
+      "name": "Wasabi Cdn Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `cdn` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"cdn\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"cdn\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-customer-exports-reference-search-484eef47c7",
+      "name": "Wasabi Customer Exports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `customer exports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"customer exports\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"customer exports\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-data-feeds-reference-search-bdc0454a14",
+      "name": "Wasabi Data Feeds Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `data feeds` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"data feeds\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"data feeds\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-documentation-reference-search-c5791a4f0f",
+      "name": "Wasabi Documentation Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `documentation` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"documentation\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"documentation\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-domain-reference-search-c438597a9b",
+      "name": "Wasabi Domain Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi that also contain the target domain. This helps identify public storage paths, screenshots, and documentation tied to the host.",
+      "query_template": "\"{domain}\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "domain-references",
+        "google",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"example.com\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-downloads-reference-search-d09aa1cf37",
+      "name": "Wasabi Downloads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `downloads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"downloads\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"downloads\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-images-reference-search-1ac38250b5",
+      "name": "Wasabi Images Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `images` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"images\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"images\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-keyword-reference-search-e02c1c572f",
+      "name": "Wasabi Keyword Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi that also contain a keyword or product name. This helps surface public file paths, asset references, and bucket naming clues.",
+      "query_template": "\"{keyword}\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "keyword-search",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"customer portal\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-manuals-reference-search-f07552f4b4",
+      "name": "Wasabi Manuals Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `manuals` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"manuals\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"manuals\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-media-reference-search-426e8fd3e8",
+      "name": "Wasabi Media Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `media` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"media\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"media\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-openapi-reference-search-9ee35aee37",
+      "name": "Wasabi Openapi Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `openapi` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"openapi\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"openapi\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-packages-reference-search-27a0ecba63",
+      "name": "Wasabi Packages Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `packages` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"packages\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"packages\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-public-files-reference-search-72bcd18b10",
+      "name": "Wasabi Public Files Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `public files` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"public files\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"public files\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-releases-reference-search-46f6ec3a52",
+      "name": "Wasabi Releases Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `releases` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"releases\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"releases\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-reports-reference-search-dd33e2d320",
+      "name": "Wasabi Reports Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `reports` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"reports\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"reports\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-screenshots-reference-search-2457bf3c25",
+      "name": "Wasabi Screenshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `screenshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"screenshots\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"screenshots\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-sitemaps-reference-search-9e88ce323b",
+      "name": "Wasabi Sitemaps Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `sitemaps` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"sitemaps\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"sitemaps\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-snapshots-reference-search-3aade566a1",
+      "name": "Wasabi Snapshots Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `snapshots` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"snapshots\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"snapshots\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-static-reference-search-289404bab3",
+      "name": "Wasabi Static Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `static` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"static\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"static\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-support-reference-search-59c5da5e04",
+      "name": "Wasabi Support Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `support` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"support\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"support\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-temporary-reference-search-cf874c1eeb",
+      "name": "Wasabi Temporary Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `temporary` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"temporary\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"temporary\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "cloud_storage-wasabi-uploads-reference-search-f14e4aad67",
+      "name": "Wasabi Uploads Reference Search",
+      "category": "Cloud Storage",
+      "engine": "Google",
+      "description": "Searches indexed references to Wasabi together with the phrase `uploads` and a target company name. This helps locate public storage references and downloadable asset locations.",
+      "query_template": "\"{company}\" \"uploads\" site:s3.wasabisys.com",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "cloud",
+        "google",
+        "references",
+        "storage",
+        "wasabi"
+      ],
+      "example": "\"Example Corp\" \"uploads\" site:s3.wasabisys.com",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    }
+  ]
+}

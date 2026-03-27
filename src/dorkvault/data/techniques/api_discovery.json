@@ -1,0 +1,1516 @@
+{
+  "category_id": "api_discovery",
+  "category_name": "API Discovery",
+  "description": "Search engine techniques for finding public API routes, developer documentation, schema files, versioned endpoints, and integration clues.",
+  "display_order": 80,
+  "techniques": [
+    {
+      "id": "api_discovery-api-changelog-search-ea1b2d98b5",
+      "name": "Api Changelog Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `api changelog`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"api changelog\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"api changelog\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-docs-search-12638f14c9",
+      "name": "Api Docs Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/api-docs`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/api-docs\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/api-docs\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-documentation-search-874a90c9d8",
+      "name": "Api Documentation Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/api/documentation`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/api/documentation\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/api/documentation\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-explorer-search-4da0485696",
+      "name": "Api Explorer Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `api explorer`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"api explorer\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"api explorer\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-path-search-87f9e81be1",
+      "name": "API Path Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches a target domain for publicly indexed recon-relevant pages. This supports discovery of public API routes, versioned endpoints, and developer-facing materials.",
+      "query_template": "site:{domain} inurl:api",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "api-discovery",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com inurl:api",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-reference-search-fb803d8af8",
+      "name": "Api Reference Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/api/reference`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/api/reference\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/api/reference\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-schema-search-40c94cbf47",
+      "name": "Api Schema Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/api/schema`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/api/schema\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/api/schema\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-search-e9211753ae",
+      "name": "Api Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/api`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/api\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/api\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-swagger-search-4d71644581",
+      "name": "Api Swagger Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/api/swagger`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/api/swagger\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/api/swagger\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-v1-search-a708a27c3c",
+      "name": "Api V1 Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/api/v1`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/api/v1\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/api/v1\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-v2-search-f75c802006",
+      "name": "Api V2 Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/api/v2`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/api/v2\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/api/v2\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-api-v3-search-94fac3cb37",
+      "name": "Api V3 Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/api/v3`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/api/v3\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/api/v3\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-apireference-json-file-search-a88dc5d613",
+      "name": "Api-Reference Json File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `api-reference.json`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:api-reference.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:api-reference.json",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-apischema-json-file-search-79ac2c2826",
+      "name": "Api-Schema Json File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `api-schema.json`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:api-schema.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:api-schema.json",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-asyncapi-yaml-file-search-5a49a163f0",
+      "name": "Asyncapi Yaml File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `asyncapi.yaml`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:asyncapi.yaml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:asyncapi.yaml",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-asyncapi-yml-file-search-f53ad2cd0f",
+      "name": "Asyncapi Yml File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `asyncapi.yml`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:asyncapi.yml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:asyncapi.yml",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-callback-search-ca0d6d5cf3",
+      "name": "Callback Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/callback`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/callback\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/callback\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-callbacks-search-280a255361",
+      "name": "Callbacks Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/callbacks`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/callbacks\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/callbacks\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-collection-json-file-search-8fbc9bfa9f",
+      "name": "Collection Json File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `collection.json`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:collection.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:collection.json",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-developer-portal-search-b953abd512",
+      "name": "Developer Portal Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `developer portal`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"developer portal\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"developer portal\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-developer-search-5bff27f8e1",
+      "name": "Developer Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/developer`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/developer\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/developer\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-graphql-endpoint-search-1fe41941b7",
+      "name": "Graphql Endpoint Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `graphql endpoint`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"graphql endpoint\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"graphql endpoint\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-graphql-playground-search-57f957ff4e",
+      "name": "Graphql Playground Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/graphql/playground`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/graphql/playground\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/graphql/playground\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-graphql-schema-json-file-search-17eb8a5c70",
+      "name": "Graphql Schema Json File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `graphql.schema.json`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:graphql.schema.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:graphql.schema.json",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-graphql-schema-search-0ba6985e86",
+      "name": "Graphql Schema Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `graphql schema`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"graphql schema\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"graphql schema\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-graphql-surface-search-ee61e532a0",
+      "name": "GraphQL Surface Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches a target domain for GraphQL routes and related references. This supports discovery of public API routes, versioned endpoints, and developer-facing materials.",
+      "query_template": "site:{domain} inurl:graphql",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "graphql",
+        "recon"
+      ],
+      "example": "site:example.com inurl:graphql",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-grpc-search-dee530a474",
+      "name": "Grpc Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/grpc`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/grpc\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/grpc\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-insomnia-json-file-search-d81f91010f",
+      "name": "Insomnia Json File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `insomnia.json`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:insomnia.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:insomnia.json",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-integration-guide-search-8ca147f4bc",
+      "name": "Integration Guide Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `integration guide`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"integration guide\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"integration guide\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-jsonrpc-search-93fe4e742e",
+      "name": "Jsonrpc Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/jsonrpc`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/jsonrpc\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/jsonrpc\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-oauth-callback-search-3b7dcecb3a",
+      "name": "Oauth Callback Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `oauth callback`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"oauth callback\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"oauth callback\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-openapi-json-file-search-3f77e8af73",
+      "name": "Openapi Json File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `openapi.json`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:openapi.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:openapi.json",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-openapi-yaml-file-search-e33b2db056",
+      "name": "Openapi Yaml File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `openapi.yaml`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:openapi.yaml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:openapi.yaml",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-openapi-yml-file-search-b630f1b913",
+      "name": "Openapi Yml File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `openapi.yml`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:openapi.yml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:openapi.yml",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-openapijson-search-c861886542",
+      "name": "Openapi.Json Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/openapi.json`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/openapi.json\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/openapi.json\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-openapiyaml-search-c018179a25",
+      "name": "Openapi.Yaml Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/openapi.yaml`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/openapi.yaml\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/openapi.yaml\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-postman-collection-json-file-search-a2044f7029",
+      "name": "Postman Collection Json File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `postman_collection.json`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:postman_collection.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:postman_collection.json",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-postman-search-629533849e",
+      "name": "Postman Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/postman`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/postman\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/postman\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-rate-limits-search-f758b74782",
+      "name": "Rate Limits Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `rate limits`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"rate limits\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"rate limits\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-redoc-html-file-search-1cc9bc3a48",
+      "name": "Redoc Html File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `redoc.html`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:redoc.html",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:redoc.html",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-rest-api-search-ad73771482",
+      "name": "Rest Api Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `rest api`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"rest api\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"rest api\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-rest-search-209e6411e6",
+      "name": "Rest Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/rest`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/rest\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/rest\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-rest-v1-search-1157a3ec15",
+      "name": "Rest V1 Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/rest/v1`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/rest/v1\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/rest/v1\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-rest-v2-search-c218cf547e",
+      "name": "Rest V2 Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/rest/v2`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/rest/v2\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/rest/v2\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-rpc-search-6b3c835acc",
+      "name": "Rpc Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/rpc`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/rpc\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/rpc\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-schema-reference-search-0ac5b52ad5",
+      "name": "Schema Reference Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `schema reference`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"schema reference\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"schema reference\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-sdk-documentation-search-43750c3606",
+      "name": "Sdk Documentation Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `sdk documentation`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"sdk documentation\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"sdk documentation\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-service-catalog-search-c6d7ae8230",
+      "name": "Service Catalog Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `service catalog`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"service catalog\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"service catalog\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-swagger-json-file-search-156924bbe0",
+      "name": "Swagger Json File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `swagger.json`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:swagger.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:swagger.json",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-swagger-search-8ad4ffd2bf",
+      "name": "Swagger Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches a target domain for Swagger or OpenAPI references. This supports discovery of public API routes, versioned endpoints, and developer-facing materials.",
+      "query_template": "site:{domain} inurl:swagger",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "openapi",
+        "recon"
+      ],
+      "example": "site:example.com inurl:swagger",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-swagger-ui-search-86906429b3",
+      "name": "Swagger Ui Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/swagger-ui`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/swagger-ui\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/swagger-ui\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-swagger-yaml-file-search-2526f827dd",
+      "name": "Swagger Yaml File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `swagger.yaml`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:swagger.yaml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:swagger.yaml",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-swagger-yml-file-search-64cbdf0763",
+      "name": "Swagger Yml File Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed content on a target domain for the public file name `swagger.yml`. This helps locate schema files, API collections, and documentation artifacts.",
+      "query_template": "site:{domain} filename:swagger.yml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com filename:swagger.yml",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-versioned-api-v1-search-1c59457dad",
+      "name": "Versioned API v1 Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches a target domain for publicly indexed recon-relevant pages. This supports discovery of public API routes, versioned endpoints, and developer-facing materials.",
+      "query_template": "site:{domain} inurl:v1",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "recon",
+        "versioning"
+      ],
+      "example": "site:example.com inurl:v1",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-versioned-api-v2-search-4d01b9eaea",
+      "name": "Versioned API v2 Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches a target domain for publicly indexed recon-relevant pages. This supports discovery of public API routes, versioned endpoints, and developer-facing materials.",
+      "query_template": "site:{domain} inurl:v2",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "recon",
+        "versioning"
+      ],
+      "example": "site:example.com inurl:v2",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-webhook-delivery-search-0d635c1a4f",
+      "name": "Webhook Delivery Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `webhook delivery`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"webhook delivery\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"webhook delivery\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-webhook-search-3874c46daf",
+      "name": "Webhook Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the route pattern `/webhook`. This helps discover public API routes, schema pages, and developer-facing endpoints.",
+      "query_template": "site:{domain} inurl:\"/webhook\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "google",
+        "path-discovery",
+        "recon"
+      ],
+      "example": "site:example.com inurl:\"/webhook\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    },
+    {
+      "id": "api_discovery-webhook-signatures-search-5218bfd710",
+      "name": "Webhook Signatures Search",
+      "category": "API Discovery",
+      "engine": "Google",
+      "description": "Searches indexed pages on a target domain for the phrase `webhook signatures`. This helps locate public API documentation, integration details, and developer support content.",
+      "query_template": "site:{domain} \"webhook signatures\"",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "api",
+        "documentation",
+        "google",
+        "recon"
+      ],
+      "example": "site:example.com \"webhook signatures\"",
+      "safe_mode": true,
+      "reference": "https://support.google.com/websearch/answer/2466433",
+      "launch_url": "https://www.google.com/search?q={query}"
+    }
+  ]
+}

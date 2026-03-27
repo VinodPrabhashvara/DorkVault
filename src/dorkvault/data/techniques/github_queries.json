@@ -1,0 +1,2179 @@
+{
+  "category_id": "github_queries",
+  "category_name": "GitHub Search",
+  "description": "Public GitHub search queries for finding documentation, workflows, deployment clues, and code references tied to a target.",
+  "display_order": 20,
+  "techniques": [
+    {
+      "id": "github-company-docs-search-4eb2f7def8",
+      "name": "Company  Docs  Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `path:/docs/`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" path:/docs/",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" path:/docs/",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-github-workflows-search-4542721e05",
+      "name": "Company  Github Workflows Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `path:.github/workflows`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" path:.github/workflows",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" path:.github/workflows",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-docker-compose-yml-search-b40d991a89",
+      "name": "Company Docker Compose Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:docker-compose.yml`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:docker-compose.yml",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:docker-compose.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-helmfile-yaml-search-583fa9bfad",
+      "name": "Company Helmfile Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:helmfile.yaml`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:helmfile.yaml",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:helmfile.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-incident-response-md-search-016cf1a638",
+      "name": "Company Incident Response Md Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:incident-response.md`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:incident-response.md",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:incident-response.md",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-ingress-yaml-search-31a9fba460",
+      "name": "Company Ingress Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:ingress.yaml`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:ingress.yaml",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:ingress.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-inventory-csv-search-bcd4021afe",
+      "name": "Company Inventory Csv Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:inventory.csv`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:inventory.csv",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:inventory.csv",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-kustomization-yaml-search-065e79326e",
+      "name": "Company Kustomization Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:kustomization.yaml`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:kustomization.yaml",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:kustomization.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-main-tf-search-61fc9a2c90",
+      "name": "Company Main Tf Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:main.tf`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:main.tf",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:main.tf",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-mkdocs-yml-search-6c313ed2ed",
+      "name": "Company Mkdocs Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:mkdocs.yml`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:mkdocs.yml",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:mkdocs.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-nginx-conf-search-17260799e1",
+      "name": "Company Nginx Conf Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:nginx.conf`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:nginx.conf",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:nginx.conf",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-openapi-yaml-search-6e12fe834b",
+      "name": "Company Openapi Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:openapi.yaml`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:openapi.yaml",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:openapi.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-package-json-search-8d3470b9eb",
+      "name": "Company Package Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:package.json`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:package.json",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:package.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-prometheus-yml-search-d48ab58957",
+      "name": "Company Prometheus Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:prometheus.yml`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:prometheus.yml",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:prometheus.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-pyproject-toml-search-97e8c65f4b",
+      "name": "Company Pyproject Toml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:pyproject.toml`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:pyproject.toml",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:pyproject.toml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-readme-md-search-024f947908",
+      "name": "Company Readme Md Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:README.md`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:README.md",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:README.md",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-runbook-md-search-f5f6a68099",
+      "name": "Company Runbook Md Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:runbook.md`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:runbook.md",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:runbook.md",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-service-map-json-search-5f0bb18ac7",
+      "name": "Company Service Map Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:service-map.json`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:service-map.json",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:service-map.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-statuspage-yml-search-053ade1079",
+      "name": "Company Statuspage Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:statuspage.yml`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:statuspage.yml",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:statuspage.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-swagger-json-search-145647bf4c",
+      "name": "Company Swagger Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:swagger.json`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:swagger.json",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:swagger.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-company-values-yaml-search-b0d0b2109d",
+      "name": "Company Values Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a company name together with `filename:values.yaml`. This helps surface public workflows, docs, and deployment material associated with the target.",
+      "query_template": "\"{company}\" filename:values.yaml",
+      "variables": [
+        {
+          "name": "company",
+          "description": "Target company or organization name.",
+          "required": true,
+          "example": "Example Corp"
+        }
+      ],
+      "tags": [
+        "company",
+        "documentation",
+        "github",
+        "recon"
+      ],
+      "example": "\"Example Corp\" filename:values.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-docs-search-952f7f8b98",
+      "name": "Domain  Docs  Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `path:/docs/` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" path:/docs/",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" path:/docs/",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-github-workflows-search-303a51baf9",
+      "name": "Domain  Github Workflows Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `path:.github/workflows` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" path:.github/workflows",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" path:.github/workflows",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-gitlab-ci-yml-search-8ec3becccb",
+      "name": "Domain  Gitlab Ci Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:.gitlab-ci.yml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:.gitlab-ci.yml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:.gitlab-ci.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-application-yml-search-87b3b57f1b",
+      "name": "Domain Application Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:application.yml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:application.yml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:application.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-build-gradle-search-153e12f092",
+      "name": "Domain Build Gradle Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:build.gradle` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:build.gradle",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:build.gradle",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-caddyfile-search-5ec8d5b90a",
+      "name": "Domain Caddyfile Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:Caddyfile` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:Caddyfile",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:Caddyfile",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-composer-json-search-c2bf52fa47",
+      "name": "Domain Composer Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:composer.json` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:composer.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:composer.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-config-json-search-80dcdcfb79",
+      "name": "Domain Config Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:config.json` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:config.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:config.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-docker-compose-yml-search-db9c1e0179",
+      "name": "Domain Docker Compose Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:docker-compose.yml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:docker-compose.yml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:docker-compose.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-dockerfile-search-c07e9c5c45",
+      "name": "Domain Dockerfile Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:Dockerfile` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:Dockerfile",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:Dockerfile",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-docusaurus-config-js-search-4b31dfe5e6",
+      "name": "Domain Docusaurus Config Js Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:docusaurus.config.js` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:docusaurus.config.js",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:docusaurus.config.js",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-helmfile-yaml-search-f63a9fb4a7",
+      "name": "Domain Helmfile Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:helmfile.yaml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:helmfile.yaml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:helmfile.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-incident-response-md-search-3862fbb74b",
+      "name": "Domain Incident Response Md Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:incident-response.md` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:incident-response.md",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:incident-response.md",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-ingress-yaml-search-5882b13375",
+      "name": "Domain Ingress Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:ingress.yaml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:ingress.yaml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:ingress.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-inventory-csv-search-3f0745a8b3",
+      "name": "Domain Inventory Csv Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:inventory.csv` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:inventory.csv",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:inventory.csv",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-jenkinsfile-search-ff2c40bbf2",
+      "name": "Domain Jenkinsfile Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:Jenkinsfile` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:Jenkinsfile",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:Jenkinsfile",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-kustomization-yaml-search-7d8fe9f128",
+      "name": "Domain Kustomization Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:kustomization.yaml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:kustomization.yaml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:kustomization.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-main-tf-search-c8dbb8e646",
+      "name": "Domain Main Tf Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:main.tf` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:main.tf",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:main.tf",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-mkdocs-yml-search-f2e346dad7",
+      "name": "Domain Mkdocs Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:mkdocs.yml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:mkdocs.yml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:mkdocs.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-nginx-conf-search-0bc5ee0e5a",
+      "name": "Domain Nginx Conf Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:nginx.conf` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:nginx.conf",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:nginx.conf",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-openapi-yaml-search-f7623b2b8f",
+      "name": "Domain Openapi Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:openapi.yaml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:openapi.yaml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:openapi.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-package-json-search-bbf1b068f1",
+      "name": "Domain Package Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:package.json` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:package.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:package.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-pom-xml-search-91f20d4cd1",
+      "name": "Domain Pom Xml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:pom.xml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:pom.xml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:pom.xml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-prometheus-yml-search-862f447e69",
+      "name": "Domain Prometheus Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:prometheus.yml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:prometheus.yml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:prometheus.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-pyproject-toml-search-24256f9a1f",
+      "name": "Domain Pyproject Toml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:pyproject.toml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:pyproject.toml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:pyproject.toml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-requirements-txt-search-c560aaf7db",
+      "name": "Domain Requirements Txt Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:requirements.txt` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:requirements.txt",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:requirements.txt",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-runbook-md-search-ab90999cf1",
+      "name": "Domain Runbook Md Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:runbook.md` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:runbook.md",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:runbook.md",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-service-map-json-search-7dfc05c4c5",
+      "name": "Domain Service Map Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:service-map.json` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:service-map.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:service-map.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-settings-json-search-bbf3dd5c35",
+      "name": "Domain Settings Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:settings.json` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:settings.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:settings.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-statuspage-yml-search-035f584d26",
+      "name": "Domain Statuspage Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:statuspage.yml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:statuspage.yml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:statuspage.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-swagger-json-search-e24a329023",
+      "name": "Domain Swagger Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:swagger.json` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:swagger.json",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:swagger.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-terraform-tfvars-search-772861e893",
+      "name": "Domain Terraform Tfvars Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:terraform.tfvars` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:terraform.tfvars",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:terraform.tfvars",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-traefik-yml-search-285d687a09",
+      "name": "Domain Traefik Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:traefik.yml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:traefik.yml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:traefik.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-values-yaml-search-41cee19067",
+      "name": "Domain Values Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:values.yaml` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:values.yaml",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:values.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-domain-zone-tf-search-385dc4401b",
+      "name": "Domain Zone Tf Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub code for a target domain together with the `filename:zone.tf` hint. This helps identify public configuration, workflow, and documentation references tied to the target.",
+      "query_template": "\"{domain}\" filename:zone.tf",
+      "variables": [
+        {
+          "name": "domain",
+          "description": "Primary target domain or hostname.",
+          "required": true,
+          "example": "example.com"
+        }
+      ],
+      "tags": [
+        "domain-references",
+        "github",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"example.com\" filename:zone.tf",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-docs-search-3afcd1602e",
+      "name": "Keyword  Docs  Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `path:/docs/`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" path:/docs/",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" path:/docs/",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-github-workflows-search-3dec6ed4a5",
+      "name": "Keyword  Github Workflows Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `path:.github/workflows`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" path:.github/workflows",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" path:.github/workflows",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-docker-compose-yml-search-a594ca2134",
+      "name": "Keyword Docker Compose Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:docker-compose.yml`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:docker-compose.yml",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:docker-compose.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-helmfile-yaml-search-2a0a1d4330",
+      "name": "Keyword Helmfile Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:helmfile.yaml`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:helmfile.yaml",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:helmfile.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-kustomization-yaml-search-5b197f675e",
+      "name": "Keyword Kustomization Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:kustomization.yaml`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:kustomization.yaml",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:kustomization.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-openapi-json-search-f0fbe50cb5",
+      "name": "Keyword Openapi Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:openapi.json`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:openapi.json",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:openapi.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-openapi-yaml-search-af98be9d03",
+      "name": "Keyword Openapi Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:openapi.yaml`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:openapi.yaml",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:openapi.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-package-json-search-b8a092d4f8",
+      "name": "Keyword Package Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:package.json`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:package.json",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:package.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-pyproject-toml-search-11a259b6f8",
+      "name": "Keyword Pyproject Toml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:pyproject.toml`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:pyproject.toml",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:pyproject.toml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-readme-md-search-f6280de6c3",
+      "name": "Keyword Readme Md Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:README.md`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:README.md",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:README.md",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-runbook-md-search-042b77ba2c",
+      "name": "Keyword Runbook Md Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:runbook.md`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:runbook.md",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:runbook.md",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-statuspage-yml-search-67f3523d52",
+      "name": "Keyword Statuspage Yml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:statuspage.yml`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:statuspage.yml",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:statuspage.yml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-swagger-json-search-adc6293dc7",
+      "name": "Keyword Swagger Json Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:swagger.json`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:swagger.json",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:swagger.json",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-swagger-yaml-search-bd203bc50a",
+      "name": "Keyword Swagger Yaml Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:swagger.yaml`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:swagger.yaml",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:swagger.yaml",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-keyword-terraform-tfvars-search-50c2bcc87d",
+      "name": "Keyword Terraform Tfvars Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories for a keyword together with `filename:terraform.tfvars`. This helps find product references, public workflows, and deployment patterns.",
+      "query_template": "\"{keyword}\" filename:terraform.tfvars",
+      "variables": [
+        {
+          "name": "keyword",
+          "description": "Target keyword, product, or free-text phrase.",
+          "required": true,
+          "example": "customer portal"
+        }
+      ],
+      "tags": [
+        "github",
+        "keyword-search",
+        "public-code",
+        "recon"
+      ],
+      "example": "\"customer portal\" filename:terraform.tfvars",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-api-surface-search-5944917014",
+      "name": "Org API Surface Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `API Surface` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (swagger OR openapi OR graphql)",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "github",
+        "graphql",
+        "openapi",
+        "organization",
+        "recon"
+      ],
+      "example": "org:example-org (swagger OR openapi OR graphql)",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-ci-workflow-search-4da3571b10",
+      "name": "Org CI Workflow Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `CI Workflow` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} path:.github/workflows",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "ci-cd",
+        "github",
+        "organization",
+        "recon",
+        "workflows"
+      ],
+      "example": "org:example-org path:.github/workflows",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-container-search-search-0eb9b456bd",
+      "name": "Org Container Search Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `Container Search` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (filename:Dockerfile OR filename:docker-compose.yml)",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "containers",
+        "deployment",
+        "github",
+        "organization",
+        "recon"
+      ],
+      "example": "org:example-org (filename:Dockerfile OR filename:docker-compose.yml)",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-dns-reference-search-e15eb6fa61",
+      "name": "Org DNS Reference Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `DNS Reference` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (\"{org}\" AND (filename:zone OR filename:named.conf))",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "configuration",
+        "dns",
+        "github",
+        "organization",
+        "recon"
+      ],
+      "example": "org:example-org (\"example-org\" AND (filename:zone OR filename:named.conf))",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-documentation-search-search-72c20a4efc",
+      "name": "Org Documentation Search Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `Documentation Search` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (filename:README.md OR path:/docs/)",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "github",
+        "organization",
+        "public-code",
+        "recon"
+      ],
+      "example": "org:example-org (filename:README.md OR path:/docs/)",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-helm-search-search-937acd19fb",
+      "name": "Org Helm Search Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `Helm Search` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (filename:Chart.yaml OR filename:values.yaml)",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "github",
+        "helm",
+        "kubernetes",
+        "organization",
+        "recon"
+      ],
+      "example": "org:example-org (filename:Chart.yaml OR filename:values.yaml)",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-incident-runbook-search-1073ac5984",
+      "name": "Org Incident Runbook Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `Incident Runbook` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (filename:runbook.md OR filename:incident-response.md)",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "github",
+        "operations",
+        "organization",
+        "recon",
+        "runbooks"
+      ],
+      "example": "org:example-org (filename:runbook.md OR filename:incident-response.md)",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-kubernetes-search-search-33a4eb6071",
+      "name": "Org Kubernetes Search Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `Kubernetes Search` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (filename:kustomization.yaml OR filename:ingress.yaml)",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "deployment",
+        "github",
+        "kubernetes",
+        "organization",
+        "recon"
+      ],
+      "example": "org:example-org (filename:kustomization.yaml OR filename:ingress.yaml)",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-monitoring-search-search-a46cfdc2cb",
+      "name": "Org Monitoring Search Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `Monitoring Search` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (grafana OR prometheus OR loki)",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "dashboards",
+        "github",
+        "monitoring",
+        "organization",
+        "recon"
+      ],
+      "example": "org:example-org (grafana OR prometheus OR loki)",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-openapi-search-search-88c8c9fe9e",
+      "name": "Org OpenAPI Search Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `OpenAPI Search` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (filename:openapi.yaml OR filename:swagger.json)",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "api-discovery",
+        "documentation",
+        "github",
+        "organization",
+        "recon"
+      ],
+      "example": "org:example-org (filename:openapi.yaml OR filename:swagger.json)",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-service-map-search-search-b99aa94783",
+      "name": "Org Service Map Search Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `Service Map Search` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (filename:service-map.json OR filename:inventory.csv)",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "github",
+        "inventory",
+        "mapping",
+        "organization",
+        "recon"
+      ],
+      "example": "org:example-org (filename:service-map.json OR filename:inventory.csv)",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    },
+    {
+      "id": "github-org-terraform-search-search-7f3ace41a6",
+      "name": "Org Terraform Search Search",
+      "category": "GitHub Search",
+      "engine": "GitHub",
+      "description": "Searches public GitHub repositories inside the `Terraform Search` family for organization-owned repositories and public infrastructure clues.",
+      "query_template": "org:{org} (filename:main.tf OR filename:terraform.tfvars)",
+      "variables": [
+        {
+          "name": "org",
+          "description": "Organization or team identifier.",
+          "required": true,
+          "example": "example-org"
+        }
+      ],
+      "tags": [
+        "github",
+        "infrastructure-as-code",
+        "organization",
+        "recon",
+        "terraform"
+      ],
+      "example": "org:example-org (filename:main.tf OR filename:terraform.tfvars)",
+      "safe_mode": true,
+      "reference": "https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax",
+      "launch_url": "https://github.com/search?q={query}&type=code"
+    }
+  ]
+}

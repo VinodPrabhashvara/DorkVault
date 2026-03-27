@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dorkvault"
+version = "0.1.0"
+description = "Local PySide6 desktop application for managing recon and search techniques."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Proprietary" }
+authors = [
+  { name = "DorkVault" }
+]
+keywords = ["osint", "recon", "security research", "pyside6", "desktop app"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: X11 Applications :: Qt",
+  "Environment :: Win32 (MS Windows)",
+  "Intended Audience :: Information Technology",
+  "License :: Other/Proprietary License",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Desktop Environment",
+  "Topic :: Security",
+  "Topic :: Software Development :: User Interfaces",
+]
+dependencies = [
+  "PySide6>=6.8,<7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "PyInstaller>=6.11,<7.0",
+  "pytest>=8.3,<9.0",
+  "ruff>=0.11,<0.12",
+]
+
+[project.scripts]
+dorkvault = "dorkvault.main:main"
+dorkvault-validate-techniques = "dorkvault.services.technique_catalog_validator:main"
+dorkvault-import-techniques = "dorkvault.services.technique_importer:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dorkvault = [
+  "assets/icons/*.ico",
+  "assets/icons/*.svg",
+  "assets/themes/*.qss",
+  "data/techniques/*.json",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
